@@ -1,0 +1,50 @@
+{
+  "headtitle":"Membership",
+  "langchoice":false,
+  "headdescription":"This is my membership page.",
+  "contentPHP":"myproject/membership/membership.html",
+  "site": {
+    "autoappend":false,
+    "elements":[
+      {
+        "datadefID": "k8login",
+        "selector":"#html2",
+        "alias":true,
+        "page": "element",
+        "datadefinition":{
+          "masterdata":{
+            "edittype":0,
+            "clause":"userID=§userID"
+          }
+         }
+      },
+      {
+        "datadefID": "k8components",
+        "selector":"#html3",
+        "page": "list",
+        "datadefinition":{
+              "name":"My items",
+              "masterdata":{
+                "htag":"h2",
+                "edittype":4,
+                "clause":"creatorID=§userID",
+                "tabulatorfilter2url":false
+              }
+         }
+      },
+      {
+        "datadefID": "k8pages",
+        "selector":"#html4",
+        "page": "list",
+        "datadefinition":{
+              "name":"My pages",
+              "masterdata":{
+                "htag":"h2",
+                "clause":"creatorID=§userID",
+                "tabulatorfilter2url":false
+              }
+         }
+      }
+    ]
+  }
+}

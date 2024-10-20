@@ -1,0 +1,29 @@
+<div class="k8-example-catalog">
+  <div class="js_rec_container rec_container" data-rec_indexmax="-1" data-rec_object="ARRAY_NAME">
+    
+    <div class="k8-headline0">
+      <div class="container">
+        <div class="row js_rec_head js_catalog">
+          <div class="col-sm-4">
+            <h1>#datadef#name#</h1>
+          </div>
+          <div class="col-sm-8">
+            <form class="js_filterform" method="GET">
+                <input type="hidden" name="datadefID">
+                <input type="hidden" name="page">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" id="search" name="search" value=""/>
+                    <button type="submit" name="submit" class="js_rec_search btn btn-primary"><i class="bi-search"></i></button>
+                    {{control_new}}
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="js_rec_records rec_records">
+        <!-- here all records will be inserted -->
+    </div><!-- js_rec_records -->
+  </div>
+</div>

@@ -1,0 +1,34 @@
+{
+  "key":"",
+  "rightcheck":1,
+  "headtitlecolumn":"{{headtitlecolumn}}",
+  "headdescriptioncolumn":"{{headdescriptioncolumn}}",
+  "headimagecolumn":"image_file",
+  "head":[],
+  "searchcolumn":"searchcolumn",
+  "masterdata":{
+    "htmlout":"catalog",
+    "edittype":4,
+    "search_mode":1,
+    "detail-carousel":false,
+    "catalog_detaillink":true,
+    "pagination":"external",
+    "paginationsize":2,
+    "defaultvalues":{"image_file":""},
+    "upload":{
+      "enabled":true
+    }
+  },
+  "html":{
+    "catalog":{
+      "container":"<div class=\"k8-example-catalog\"> <div class=\"pb-1 js_rec_container rec_container catalog\" data-rec_indexmax=\"-1\"> <div class=\"row js_rec_head js_catalog\" id=\"searcharea\"> <div class=\"col-sm-4 mt-3\"> <h1>#datadef#title#</h1> </div> <div class=\"col-sm-8 mt-3\"> <form id=\"filterform\" method=\"GET\"> <input type=\"hidden\" name=\"datadefID\"> <input type=\"hidden\" name=\"page\"> <input type=\"hidden\" name=\"table\"> <input type=\"hidden\" name=\"headtitlecolumn\"> <input type=\"hidden\" name=\"headdescriptioncolumn\"> <div class=\"input-group mt-1\" id=\"searchlineb5\"> <input type=\"search\" class=\"form-control\" placeholder=\"Search\" id=\"search\" name=\"search\" value=\"\"/> <div class=\"input-group-btn\"> <button type=\"submit\" class=\"js_rec_search btn btn-primary\"><i class=\"bi-search\"></i></button> {{control_new}} </div> </div> </form> </div> </div> <div class=\"js_rec_head js_member\" style=\"display: none\"> <div class=\"k8-flex-row\"> <div class=\"k8-flex-100\"> <h2>#ls#In Preparation#</h2> </div> <div class=\"k8-flex-100 text-end\"> <button type=\"button\" class=\"js_rec_new btn btn-primary\">#ls#New#</button> </div> </div> </div> <hr> <div class=\"js_rec_records rec_records\"></div> </div> </div>",
+      "record":"<div class=\"js_rec_record rec_record\" data-keyvalue=\"{{keyvalue}}\" data-rec_index=\"{{index}}\"> <div class=\"js_inlineform\"> <div class=\"row\"> <div class=\"col-sm-4\"> <div class=\"k8-box-square\"> <div class=\"k8-box-content\"> <img class=\"k8-image-{{image_orientation}}\" src=\"{{image_file}}\"> </div> </div> </div> <div class=\"col-sm-8\"> <div class=\"k8-padding-side-small\"> <div class=\"k8-link-main\"> {{control_edit}} <a class=\"js_detaillink\" href=\"{{masterdata_url_detail}}\">{{{{headtitlecolumn}}}}</a> {{control_delete}} </div> <div class=\"k8-content\"> <p>{{{{headdescriptioncolumn}}}}</p>{{more_columns}} </div> </div> </div> </div> </div> <hr> </div>",
+      "ALTrecord":"<div class=\"js_rec_record rec_record\" data-keyvalue=\"{{keyvalue}}\" data-rec_index=\"{{index}}\"> <div class=\"js_inlineform\"> <div class=\"row\"> <div class=\"col-sm-4\"> <div class=\"k8-box-square\"> <div class=\"k8-box-content\"> <img class=\"k8-image-{{image_orientation}}\" src=\"{{image_file}}\"> </div> </div> </div> <div class=\"col-sm-8\"> <div class=\"k8-padding-side-small\"> <div class=\"k8-link-main\"> {{control_edit}} <a class=\"js_detaillink\" href=\"\">{{{{headtitlecolumn}}}}</a> {{control_delete}} </div> <div class=\"k8-content\"> <p>{{{{headdescriptioncolumn}}}}</p> </div> </div> </div> </div> </div> <hr> </div>"
+    },
+    "detail":{
+      "container":"<div class=\"k8-detail\"> <div class=\"js_rec_container rec_container\" data-rec_indexmax=\"-1\" data-rec_object=\"\"> <div class=\"k8-padding-top-normal\"><a href=\"javascript:history.back()\"><span class=\"\"><i class=\"bi-arrow-left\"></i></span> #ls#back to results#</a></div> <div class=\"js_rec_records rec_records\"> <!-- here all records will be inserted --> </div> </div> </div>",
+      "record":"<div class=\"js_rec_record rec_record\" data-keyvalue=\"{{keyvalue}}\" data-rec_index=\"{{index}}\"> <div class=\"row\"> <div class=\"col-sm-6 k8-margin-top-normal k8-margin-bottom-6\" style=\"\"> <div class=\"k8-box-square\"> <div class=\"k8-box-content\"> <img class=\"k8-image-{{image_orientation}}\" src=\"{{image_file}}\"> </div> </div> <div data-v_if=\"dat['image_array'].length>1\"> <div class=\"k8-image-list k8-hor-scrolling-wrapper\" data-loop_object=\"image_array\"> <div class=\"k8-hor-scrolling-card\"> <div class=\"k8-box-square\" style=\"width: 80px;\"> <div class=\"k8-box-content\"> <img style=\"cursor: pointer\" class=\"js_image_click k8-image-{{image_orientation*}}\" src=\"\" data-src=\"{{image_file*}}\"> </div> </div> </div> </div> </div> </div> <div class=\"col-sm-6 k8-margin-bottom-6\"> <div class=\"k8-padding-side-small\"> <div class=\"k8-link-main\"> <h1>{{{{headtitlecolumn}}}}</h1> </div> <div class=\"k8-content k8-padding-bottom-normal\"> <p>{{{{headdescriptioncolumn}}}}</p> <div class=\"text-end\"> <button type=\"button\" class=\"js_mybtn btn btn-secondary\">Choose</button> </div> </div> </div> </div> </div> <hr style=\"margin-top: 10px\"> <div class=\"row k8-margin-bottom-normal\"> <div class=\"col-sm-12\"> <p>Place here more details</p> </div> </div> <div class=\"offer_list k8-margin-bottom-normal\"></div> </div>",
+      "recinput":"<div class=\"js_rec_record rec_record\" data-keyvalue=\"{{keyvalue}}\" data-rec_index=\"{{index}}\"><div class=\"js_inlineform\">{{js_dataform}}</div><hr></div>"
+    }
+  }
+}

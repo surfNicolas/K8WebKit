@@ -1,0 +1,177 @@
+{
+    "datadefID": "k8rightmembers",
+    "table": "k8rightmembers",
+    "name": "Members",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+    "key": "ID",
+    "masterdatadefID":"k8rightgroups",
+    "masterkey":"rightgroupID",
+    "settingsadditional":["k8searchuser"],
+    "columns": [
+        {
+            "Field": "ID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "ID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "rightgroupID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "rightgroupID",
+            "myextra": ""
+        },
+        {
+            "Field": "status",
+            "Type": "tinyint(4)",
+            "Null": "NO",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "TINYINT",
+            "size": 4,
+            "fieldname": "status",
+            "myextra": ""
+        },
+        {
+            "Field": "userID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "userID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "url_new": "index.php?page=form&datadefID=k8rightmembers&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8rightmembers&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8rightmembers",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8rightmembers&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8rightmembers&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8rightmembers&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8rightmembers",
+            "process_action": "ReadFilter"
+        },
+        "edittype":3,
+        "bnoform":true,
+        "rights":{
+            "create":{
+              "2":2,
+              "3":1000
+            },
+            "read":{
+              "2":2,
+              "3":1000
+            },
+            "update":{
+              "2":2,
+              "3":1000
+            },
+            "delete":{
+              "2":2,
+              "3":1000
+            }
+        },
+        "sql_derived":"SELECT k8rightmembers.*,username,'' as k8select FROM k8rightmembers LEFT OUTER JOIN k8login ON k8login.userID=k8rightmembers.userID WHERE 1=1",
+        "sql_orderby":"username"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "ID",
+                "field": "ID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "rightgroupID",
+                "field": "rightgroupID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "userID",
+                "field": "userID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "username",
+                "field": "username",
+                "headerFilter": true
+            },
+            {
+                "title": "status",
+                "field": "status",
+                "headerFilter": true
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "ID",
+                "type": "hidden",
+                "label": "ID"
+            },
+            {
+                "name": "rightgroupID",
+                "type": "hidden",
+                "label": "rightgroupID"
+            },
+            {
+                "name": "userID",
+                "type": "hidden",
+                "label": "userID"
+            },
+            {
+                "name": "username",
+                "type": "text",
+                "label": "username",
+                "required":true,
+                "attributes":{
+                  "list": "username_datalist",
+                  "autocomplete": "OFF"
+                },
+                "datalist":{
+                  "datadefID":"k8searchuser",
+                  "IDfield":"userID",
+                  "onlyoptions":true
+                }
+            },
+            {
+                "name": "status",
+                "tagName": "select",
+                "label": "status",
+                "options":[{"value":"-1","text":"-1: blocked"},{"value":"0","text":"0: request"},{"value":"1","text":"1: member, only read"},{"value":"2","text":"2: member"},{"value":"3","text":"3: admin"}]
+            }
+        ]
+    }
+}

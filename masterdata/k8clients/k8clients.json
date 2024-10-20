@@ -1,0 +1,155 @@
+{
+    "datadefID": "k8clients",
+    "table": "k8clients",
+    "name": "Clients",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+    "key": "clientID",
+    "datalistcolumn":"name",
+    "columns": [
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "name",
+            "Type": "varchar(60)",
+            "Null": "YES",
+            "Key": "UNI",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 60,
+            "fieldname": "name",
+            "myextra": ""
+        },
+        {
+            "Field": "description",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "description",
+            "myextra": ""
+        },
+        {
+            "Field": "datetimecreated",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datetimecreated",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "creatorID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "url_new": "index.php?page=form&datadefID=k8clients&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8clients&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8clients",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8clients&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8clients&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8clients&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8clients",
+            "process_action": "ReadFilter"
+        },
+        "sql_derived":"SELECT k8clients.*, username,'' as k8select FROM k8clients LEFT OUTER JOIN k8login ON k8clients.creatorID=k8login.userID WHERE 1=1",
+        "sql_orderby":"name"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "clientID",
+                "field": "clientID",
+                "width": 100,
+                "headerFilter": true
+            },
+            {
+                "title": "name",
+                "field": "name",
+                "headerFilter": true
+            },
+            {
+                "title": "description",
+                "field": "description",
+                "visible":false,
+                "headerFilter": true
+            },
+            {
+                "title": "datetimecreated",
+                "field": "datetimecreated",
+                "headerFilter": "input",
+                "width": 160,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                }
+            },
+            {
+                "title": "creatorname",
+                "field": "username",
+                "headerFilter": true,
+                "width": "160"
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible":false,
+                "width": "80"
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "clientID",
+                "type": "hidden"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "name",
+                "required":true,
+                "maxLength": 60
+            },
+            {
+                "name": "description",
+                "tagName": "textarea",
+                "label": "description"
+            }
+        ]
+    }
+}

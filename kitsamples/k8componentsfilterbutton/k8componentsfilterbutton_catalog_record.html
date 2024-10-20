@@ -1,0 +1,29 @@
+<div class="js_rec_record rec_record" data-keyvalue="{{keyvalue}}" data-rec_index="{{index}}">
+  <div class="container py-4">
+    <div class="js_inlineform"> <!-- for the form-->
+      <div class="row">
+
+        <div class="col-sm-6">
+          <!-- image -->
+          <!-- <img class="img-fluid" src="{{image_file}}"  alt="{{text1}}"> -->
+          <div class="k8-ratio-3-2" style="background-image:url('{{image_file}}')"></div>
+        </div>  
+
+        <div class="col-sm-6">
+            <div class="pb-3">
+              {{control_edit}}
+              <span style="position:relative; top:6px" class="px-1 fs-3">{{text1}}</span>
+              <span class="js_status badge"></span>
+              {{control_delete}}
+            </div>
+            <p>created at: {{datecreated}}</p>
+            <p class="mb-2 k8-justify">{{textdimensions}}</p>
+            <div class="text-end">
+                <button type="button" class="js_mybtn btn btn-secondary">#ls#More#</button>
+            </div>
+        </div>  
+
+      </div>
+    </div>
+  </div>
+</div>  

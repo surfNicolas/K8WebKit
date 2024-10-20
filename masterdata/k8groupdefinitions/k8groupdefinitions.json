@@ -1,0 +1,187 @@
+{
+    "datadefID": "k8groupdefinitions",
+    "table": "k8groupdefinitions",
+    "name": "Group definitions",
+    "headtitle": "Group definitions",
+    "headdescription": "This are group definitions by the user",
+    "revision": 2,
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+    "key": "groupdefID",
+    "columns": [
+        {
+            "Field": "groupdefID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": "10",
+            "fieldname": "groupdefID",
+            "myextra": "auto_increment",
+            "noupdate": 1,
+            "noinsert": 1
+        },
+        {
+            "Field": "title",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": "50",
+            "fieldname": "title",
+            "myextra": ""
+        },
+        {
+            "Field": "type",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "UNI",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": "50",
+            "fieldname": "type",
+            "myextra": ""
+        },
+        {
+            "Field": "special",
+            "Type": "tinyint(4)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TINYINT",
+            "size": "4",
+            "fieldname": "special",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Extra": "",
+            "mytype": "INT",
+            "size": "10",
+            "fieldname": "creatorID",
+            "myextra": "",
+            "noupdate": 1,
+            "noinsert": 1
+        }
+    ],
+    "masterdata": {
+        "defaultvalues":{"special":0},
+        "url_new": "index.php?page=form&datadefID=k8groupdefinitions&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8groupdefinitions&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8groupdefinitions",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8groupdefinitions&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8groupdefinitions&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8groupdefinitions&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8groupdefinitions",
+            "process_action": "ReadFilter"
+        },
+        "sql_derived": "select k8groupdefinitions.*,k8login.username,'' as k8select FROM k8groupdefinitions LEFT OUTER JOIN k8login ON k8groupdefinitions.creatorID=k8login.userID WHERE 1=1",
+        "sql_orderby": "title"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "groupdefID",
+                "field": "groupdefID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "title",
+                "field": "title",
+                "headerFilter": true
+            },
+            {
+                "title": "internal name",
+                "field": "type",
+                "headerFilter": true
+            },
+{
+  "title": "special",
+  "field": "special",
+  "width": "80",
+  "headerFilter": "list",
+  "minWidth": 120,
+  "formatter":"#function#k8tabulatorformatter#", 
+  "formatterParams": {
+    "type": "color",
+    "values": {
+      "0":{"text":"normal"},
+      "1":{"text":"with color"}
+    }
+  },
+  "headerFilterParams": {
+    "values": {
+      "0": "normal",
+      "1": "with color",
+      "": ""
+    }
+  }
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible":false,
+                "width": "80"
+            },
+            {
+                "title": "creator name",
+                "field": "username",
+                "headerFilter": true,
+                "width": "140"
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "groupdefID",
+                "type": "hidden",
+                "label": "groupdefID"
+            },
+            {
+                "name": "title",
+                "type": "text",
+                "label": "title",
+                "attributes": {
+                    "maxlength": "50"
+                }
+            },
+            {
+                "name": "type",
+                "type": "text",
+                "label": "internal name",
+                "attributes": {
+                    "maxlength": "50"
+                }
+            },
+            {
+                "name": "special",
+                "tagName": "select",
+                "options":[
+                  {"value":0,"text":"normal"},
+                  {"value":1,"text":"with color"}
+                ],
+                "label": "special"
+            }
+        ]
+    }
+}

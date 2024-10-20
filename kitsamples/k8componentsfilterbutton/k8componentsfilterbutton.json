@@ -1,0 +1,148 @@
+{
+    "datadefID":"k8componentsfilterbutton",
+    "name":"My Items",
+    "table":"k8components",
+    "key":"componentID",
+    "objectclass":"data_accessclass",
+    "rightcheck":true,
+    "headtitle":"My Items",
+    "headdescription":"Here are all all items off the member listed. An additional button allows to choose the status: all, prepared, published and closed.",
+    "headimage":"img/item-masterdata.jpg",
+    "head_include":["kitsamples/k8componentsfilterbutton/k8componentsfilterbutton_head_include.php"],
+    "head_end":[
+      "<script src='{{root}}kitsamples/k8componentsfilterbutton/k8componentsfilterbutton.js'></script>"],
+    "masterdata": {
+        "selector":"#html0",
+        "disprecdirect":1,
+        "edittype":4,
+        "placeholder_mode":2,
+        "pagination":"external",
+        "paginationsize":2,
+        "paginationcontainer":"<div class=\"container\"><div class=\"js_rec_pagination\"></div></div>",
+        "url_new":  "index.php?page=form&page_mode=2&datadefID=k8components&process_action=New",
+        "url_edit": "index.php?page=form&page_mode=2&datadefID=k8components&process_action=Edit",
+        "url_detail": "index.php?page=detail&datadefID=k8componentsfs",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=k8components&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=k8components&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8components&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8components&process_action=Save",
+        "url_del":  "masterdata\/ProcessData.php?datadefID=k8components&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8components",
+            "process_action": "ReadFilter"
+        },
+        "filterobject":{
+          "createform":false,
+          "method":"GET",
+          "XXXfields":[
+          ],
+          "fields":[
+            {
+              "name": "text1",
+              "operator": "like"
+            },
+            {
+              "name": "status",
+              "type":"hidden",
+              "operator": "=",
+              "value_ignore":-1,
+              "value":-1
+            },
+            {
+              "name": "category",
+              "type":"hidden",
+              "operator": "="
+            }
+          ]
+        }    
+    },
+    "tabulator":{
+        "selectable":true,
+        "columns":[
+            {
+                "title": "componentID",
+                "field": "componentID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {"title": "Item no","field":"componentnumber","width":100,"headerFilter": true},
+            {"title": "Text 1","field":"text1","headerFilter": true},
+            {
+                "title": "text2",
+                "field": "text2",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "textdimensions",
+                "field": "textdimensions",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "descriptionlong",
+                "field": "descriptionlong",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "category",
+                "field": "category",
+                "headerFilter": true,
+                "visible": true
+            },
+            {
+                "title": "baseunit",
+                "field": "baseunit",
+                "headerFilter": true,
+                "visible": false
+            },
+            {"title": "Sales unit","field":"salesunit","width":60,"headerFilter": true},
+            {
+                "title": "vatclass",
+                "field": "vatclass",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "conversionfactorsales",
+                "field": "conversionfactorsales",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "formatter": "money",
+                "formatterParams": {
+                    "decimal": ",",
+                    "thousand": ".",
+                    "precision": 2
+                },
+                "visible": false
+            },
+            {"field":"price","title": "Price","hozAlign": "right","width": "80","headerFilter": true,
+             "formatter":"money",
+             "formatterParams":{"decimal":"GLOBALS_decimal_point","thousand":"GLOBALS_thousands_sep","precision":2}
+            },
+            {"title": "attached","field":"datecreated","width":160,"headerFilter": "input",
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                }
+            },
+            {
+                "title": "status",
+                "field": "status",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            
+            {"title": "username","field":"username","width":100,"headerFilter": true}
+        ]
+    }
+}    

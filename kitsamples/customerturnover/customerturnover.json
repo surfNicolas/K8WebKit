@@ -1,0 +1,38 @@
+{
+    "datadefID":"customerturnover",
+    "headtitle":"Turn over",
+    "headdescription":"Example Chart.js: it is easy to combine Chart.js together with the K8 Web Kit elements.",
+    "headimage":"kitsamples/customerturnover/customerturnover_1200_1.jpg",
+    "table": "k8documents",
+    "name": "customerturnover",
+    "objectclass": "data_accessclass",
+    "key":"",
+    "rightcheck": 1,
+    "settingsadditional":["invoice"],
+    "foot":["<script src=\"https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js\"></script>",
+      "<script src=\"{{root}}kitsamples/customerturnover/customerturnover.js\"></script>"],  
+    "foot_nodefault":true,
+    "columns": [
+    ],
+
+    "masterdata": {
+        "datareadlimit":20,
+        "htmlout":"html",
+        "root": "",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "customerturnover",
+            "process_action": "ReadFilter"
+        },
+        "defaultrights":false,
+        "rights":{
+            "read":{
+                    "0":1,
+                    "2":2,
+                    "3":10
+            }
+        },
+        "sql_statement":"select partnernumber, SUBSTRING(concat(partnernumber,' ', name1),1,20) as partner, round(sum(amount_gross),2) as amount FROM k8documents WHERE 1=1 group by partnernumber ",
+        "sql_orderby":"sum(amount_gross) desc"
+    }
+}

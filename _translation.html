@@ -1,0 +1,40 @@
+<!--<h1>Translation</h1>-->
+<div class="k8-headline0">
+  <div class="container">
+    <h1>Translation</h1>
+  </div>
+</div>
+  
+<div class="container my-2 mb-md-4">
+  <p><strong>Attention</strong>, this translation is only made for your developement. This page is only available in english. Even the language has changed to german for the default language file.</p>
+  <p> Copy the "Origin" vocabulary into a translator, like google translate. Paste the translated vocabulary into translation. Take care, that the number of lines in both fields are equal (no blank lines allowed). Verify the translation and change it, if necessary. Press "Create File".</p>
+  <div id="form1"></div>
+
+  <h2>masterdata/js/lang_sys_&lt;language_code&gt;.js</h2>
+  <p>the language codes are in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO_639-1</a>.</>
+  <p class="mb-1">Create a JavaScript File in masterdata/js with the name "lang_sys_&lt;language_code&gt;, like this for german:</p>
+  <p>lang_sys_de.js</p>
+  <p class="mb-1">Write the following lines in it:</p>
+  var text={};<br>
+  var textnew={};<br>
+  <p class="mt-2">Paste the content of "file" beneath it and save it.</p>
+
+  <!--<p>Source</p>
+  <textarea id="origin"></textarea>
+  <p>Translation</p>
+  <textarea id="translation"></textarea>
+  <button id="createfile">Create File</button>
+  <p>File</p>
+  <textarea id="result"></textarea>-->
+
+  <h2>masterdata/_init.php</h2>
+  <p>You have to add your language to the "domain_languages". Unnecessary languages can be removed. By more than 1 language the language selection is displayed in the menu (example with german).</p>
+<textarea>
+$GLOBALS['domain_languages']['de']=array('languageID'=>2,"flag"=>"<span class=\"flag-icon flag-icon-de\"></span>","label"=>"Deutsch","labelen"=>"German");
+</textarea>
+  <p class="mt-2 mb-1">Update this line with your language code:</p>
+<textarea class="form-control" style="height: 36px;">
+$GLOBALS['domain_langnative']='en';
+</textarea>
+</div>
+  

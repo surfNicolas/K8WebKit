@@ -1,0 +1,36 @@
+<div class="js_rec_record k8-flex-row records_employee" data-keyvalue="{{keyvalue}}" data-rec_index="{{index}}">
+    <div class="k8-flex-30-fix recordmarker"><!--classwrap-->
+        {{control_delete}}
+        {{control_cancel}}
+        <input type="hidden" name="groupID">
+        <input type="hidden" name="type">
+    </div>
+    <div class="k8-flex-100 k8-flex-table-record-sub">
+        <div data-v_if="#datadef#withcolor#">
+          <div class="k8-flex-row">
+            <div class="k8-flex-100">
+                <input type="text" class="form-control" style="text-align: left;" name="title">
+            </div>
+            <div class="k8-flex-30-fix">
+                <input type="color" class="form-control" style="text-align: left;" name="fontcolor">
+            </div>
+            <div class="k8-flex-30-fix">
+                <input type="color" class="form-control" style="text-align: left;" name="backgroundcolor" value="#ffffff">
+            </div>
+            <div class="k8-flex-30-fix js_contain_submit">
+              {{control_edit}}
+            </div>
+          </div>
+        </div>
+        <div data-v_if="!#datadef#withcolor#">
+          <div class="k8-flex-row">
+            <div class="k8-flex-100">
+                <input type="text" class="form-control" style="text-align: left;" name="title">
+            </div>
+            <div class="k8-flex-30-fix js_contain_submit">
+              {{control_edit}}
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

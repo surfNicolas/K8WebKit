@@ -1,0 +1,500 @@
+{
+    "datadefID": "customerdatalist",
+    "table": "er_customer",
+    "name": "Customer",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "headtitle":"Customer",
+    "headdescription":"the customer example allows you to insert address and contact data",
+    "rightcheck": 1,
+    "key": "accountID",
+  
+    "displaycolumn":"accountnumber",
+    "searchcolumn1":"accountnumber",
+    "searchcolumn2":"name1",
+    "datalistcolumn":"search",
+    "columns": [
+        {
+            "Field": "accountID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "accountID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID",
+            "myextra": ""
+        },
+        {
+            "Field": "accountnumber",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "accountnumber",
+            "myextra": ""
+        },
+        {
+            "Field": "name1",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "name1",
+            "myextra": ""
+        },
+        {
+            "Field": "name2",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "name2",
+            "myextra": ""
+        },
+        {
+            "Field": "street",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "street",
+            "myextra": ""
+        },
+        {
+            "Field": "country",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "country",
+            "myextra": ""
+        },
+        {
+            "Field": "code",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "code",
+            "myextra": ""
+        },
+        {
+            "Field": "city",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "city",
+            "myextra": ""
+        },
+        {
+            "Field": "phone",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "phone",
+            "myextra": ""
+        },
+        {
+            "Field": "mobile",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "mobile",
+            "myextra": ""
+        },
+        {
+            "Field": "email",
+            "Type": "varchar(250)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 250,
+            "fieldname": "email",
+            "myextra": ""
+        },
+        {
+            "Field": "website",
+            "Type": "varchar(100)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 100,
+            "fieldname": "website",
+            "myextra": ""
+        },
+        {
+            "Field": "fax",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "fax",
+            "myextra": ""
+        },
+        {
+            "Field": "facebook",
+            "Type": "varchar(100)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 100,
+            "fieldname": "facebook",
+            "myextra": ""
+        },
+        {
+            "Field": "memo",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "memo",
+            "myextra": ""
+        },
+        {
+            "Field": "datetimecreated",
+            "Type": "datetime",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datetimecreated",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "init_data":1,
+        "edittype":9,
+        "url_new": "index.php?page=form&datadefID=customerdatalist&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=customerdatalist&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=customerdatalist",
+        "url_load": "masterdata\/ProcessData.php?datadefID=customerdatalist&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=customerdatalist&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=customerdatalist&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "customerdatalist",
+            "process_action": "ReadFilter"
+        },
+        "menuleftobj":{
+          "button":{
+            "text":"<i class=\"bi-menu-down\"></i>",
+            "carettype":0
+          },
+          "items":[
+            {"value":"insert","label":"Insert from clipboard"}
+          ]
+        },
+        "sql_derived":"SELECT er_customer.*,concat(accountnumber,' ',name1) as search, '' as k8select FROM er_customer WHERE 1=1",
+        "sql_orderby":"name1"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "accountID",
+                "field": "accountID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "accountnumber",
+                "field": "accountnumber",
+                "headerFilter": true,
+                "width": "80"
+            },
+            {
+                "title": "name1",
+                "field": "name1",
+                "headerFilter": true
+            },
+            {
+                "title": "name2",
+                "field": "name2",
+                "visible": false,
+                "headerFilter": true
+            },
+            {
+                "title": "street",
+                "field": "street",
+                "headerFilter": true
+            },
+            {
+                "title": "country",
+                "field": "country",
+                "width":80,
+                "headerFilter":"list","headerFilterFunc":"=","headerFilterParams":{"values":["","DE","FR","GB"],"clearable":true}
+            },
+            {
+                "title": "code",
+                "field": "code",
+                "width":80,
+                "headerFilter": true
+            },
+            {
+                "title": "city",
+                "field": "city",
+                "headerFilter": true
+            },
+
+            {
+                "title": "phone",
+                "field": "phone",
+                "headerFilter": true
+            },
+            {
+                "title": "mobile",
+                "field": "mobile",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "email",
+                "field": "email",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "website",
+                "field": "website",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "fax",
+                "field": "fax",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "facebook",
+                "field": "facebook",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "memo",
+                "field": "memo",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "datetimecreated",
+                "field": "datetimecreated",
+                "headerFilter": "input",
+                "width": 160,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                },
+                "visible": false
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "template":"<form class=\"masterdata-form\">{{innerHTML}}</form>",
+        "fields": [
+            { 
+              "identifier":"searchdatalist",
+              "inputgroup":{
+                "fields":[
+                  {
+                      "name": "k8search",
+                      "type": "search",
+                      "attributes":{
+                        "list":"simpledata",
+                        "autocomplete":"OFF"
+                      },
+                      "label": "Search",
+                      "maxLength": 50
+                  }
+                ],
+                "template":"<div class=\"input-group\">{{control_delete}}{{field0}}{{control_save}}{{control_new}}</div>"
+              }
+            },
+            { 
+              "identifier":"name1datalist",
+              "active":false,
+              "inputgroup":{
+                "fields":[
+                  {
+                      "name": "k8search",
+                      "type": "search",
+                      "attributes":{
+                        "list":"simpledata_slim",
+                        "autocomplete":"OFF"
+                      },
+                      "label": "Name 1",
+                      "maxLength": 50
+                  }
+                ],
+                "template":"<div class=\"input-group\">{{control_delete}}{{field0}}{{control_save}}{{control_new}}</div>"
+              }
+            },
+            {
+                "name": "accountID",
+                "type": "hidden",
+                "label": "accountID"
+            },
+            {
+                "name": "accountnumber",
+                "type": "text",
+                "label": "accountnumber",
+                "required":true,
+                "maxLength": 50
+            },
+            {
+                "name": "name1",
+                "type": "text",
+                "label": "name1",
+                "required":true,
+                "maxLength": 50
+            },
+            {
+                "name": "name2",
+                "type": "text",
+                "label": "name2",
+                "maxLength": 50
+            },
+            {
+                "name": "street",
+                "type": "text",
+                "label": "street",
+                "maxLength": 50
+            },
+             {
+                "name": "country",
+                "tagName": "select",
+                "label": "country",
+                "options": ["","DE","IT","FR"]
+            },
+            {
+              "inputgroup":
+              {
+                "label": "code / city",
+                "fields":[
+                {
+                    "name": "code",
+                    "fieldclass":"form-control k8-flex-100-fix",
+                    "type": "text",
+                    "label": "code",
+                    "maxLength": 10
+                },
+                {
+                    "name": "city",
+                    "type": "text",
+                    "label": "city",
+                    "fieldclass":"form-control k8-flex-100",
+                    "maxLength": 50
+                  }
+                ]
+              }
+            },
+            {
+                "name": "phone",
+                "type": "text",
+                "label": "phone",
+                "maxLength": 50
+            },
+            {
+                "name": "mobile",
+                "type": "text",
+                "label": "mobile",
+                "maxLength": 50
+            },
+            {
+                "name": "email",
+                "type": "email",
+                "label": "email",
+                "maxLength": 250
+            },
+            {
+                "name": "website",
+                "type": "text",
+                "label": "website",
+                "maxLength": 100
+            }
+        ]
+    }
+}

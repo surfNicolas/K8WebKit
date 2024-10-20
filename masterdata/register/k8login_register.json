@@ -1,0 +1,78 @@
+{
+    "datadefID":14,
+    "table": "k8login",
+    "name": "Users",
+    "objectclass": "data_accessclass",
+    "key": "userID",
+    "displaycolumn":"username",
+    "rightcheck": 1,
+    "masterdata": {
+        "headline":"<div><h1 class=\"js_title\">Register</h1></div>",
+        "formwrapper":"<div class=\"form-wrapper\"><form class=\"js_dataform\"</form></div>",
+        "formmode":3,
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "url_save": "masterdata\/ProcessData.php?datadefID=5&process_action=Save",
+        "defaultrights":0,
+        "rights":{
+            "create":{
+                "0":2
+            }
+        },
+        "include":{
+            "afterupdate":"masterdata/k8login_SESSION_update.php"
+        }
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+              "name":"userID",
+              "type": "hidden",
+              "label": "userID"
+            },
+            {
+              "name":"username",
+              "type": "text",
+              "label": "username",
+              "maxlength": 50,
+              "minlength":6,
+              "required":true
+            },
+            {
+              "name":"email",
+              "type": "email",
+              "label": "email",
+              "maxlength": 100,
+              "required":true            
+            },
+            {
+              "name":"password",
+              "type": "password",
+              "label": "password",
+              "maxlength": 50,
+              "minlength":6,
+              "required":true
+            },
+            {
+              "name":"active",
+              "tagName": "select",
+              "active":false,
+              "value": 0,
+              "options":[{"value":"0","text":"0: not active"},{"value":"1","text":"1: active"},{"value":"2","text":"2: blocked"},{"value":"3","text":"3: deleted"}]
+            },
+            {
+              "name":"roleID",
+              "type": "hidden",
+              "value": 3
+            },
+            {
+              "name":"roles",
+              "type": "string",
+              "active":false,
+              "default": 3
+            }
+        ]
+    }
+}

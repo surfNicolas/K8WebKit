@@ -1,0 +1,24 @@
+<div class="k8-example-catalog k8-element-shadow ">
+  <div class="js_rec_container rec_container catalog" data-rec_indexmax="-1">
+    <div class="row g-0 px-2 js_rec_head rec_headbg js_catalog">
+      <div class="col-sm-4 mt-2 js_title"><h1>#datadef#name#</h1></div>
+      <div class="col-sm-8 mt-2 mb-b2">
+        <form id="filterform" class="js_filterform" method="GET">
+          <input type="hidden" name="datadefID">
+          <input type="hidden" name="page">
+          <input type="hidden" name="table">
+          <input type="hidden" name="headtitlecolumn">
+          <input type="hidden" name="headdescriptioncolumn">
+          <div class="input-group mt-1" id="searchlineb5">
+             <input type="search" class="form-control" placeholder="Search" id="search" name="search" value=""> 
+             <button type="submit" name="submit" class="js_rec_search btn btn-primary"><i class="bi-search"></i></button> 
+             {{control_new}}
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="js_rec_records rec_records pt-3 px-2"></div>
+    <div class="js_rec_foot rec_foot px-2"></div>
+  </div>
+</div>

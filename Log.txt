@@ -1,0 +1,57 @@
+17.10.2024 05:18:59 []
+17.10.2024 05:18:59 []
+17.10.2024 05:18:59 {"prepare_optionsadditional.datadefID":"k8pages"}
+17.10.2024 05:18:59 []
+17.10.2024 05:19:00 []
+17.10.2024 05:19:00 []
+17.10.2024 05:19:05 []
+17.10.2024 05:19:05 []
+17.10.2024 05:19:05 {"prepare_optionsadditional.datadefID":"k8pages"}
+17.10.2024 05:19:05 []
+17.10.2024 05:19:05 []
+17.10.2024 05:19:05 []
+17.10.2024 05:21:40 []
+17.10.2024 05:21:40 []
+17.10.2024 05:21:40 {"prepare_optionsadditional.datadefID":"k8pages"}
+17.10.2024 05:21:40 []
+17.10.2024 05:21:40 []
+17.10.2024 05:21:40 []
+17.10.2024 05:24:48 []
+17.10.2024 05:24:48 []
+17.10.2024 05:24:48 {"prepare_optionsadditional.datadefID":"k8pages"}
+17.10.2024 05:24:48 []
+17.10.2024 05:24:48 []
+17.10.2024 05:24:48 []
+17.10.2024 05:24:49 {"datadefID":"k8pages","process_action":"ReadFilter","clause":"groupID=4 and pageID>=0"}
+17.10.2024 05:24:49 {"datadefID":"k8pages","process_action":"ReadFilter","clause":"groupID=4 and pageID>=0"}
+19.10.2024 12:39:47 []
+19.10.2024 12:39:47 []
+19.10.2024 12:39:47 {"prepare_optionsadditional.datadefID":"k8pages"}
+19.10.2024 12:39:47 []
+19.10.2024 12:39:47 []
+19.10.2024 12:39:47 []
+19.10.2024 12:39:48 {"datadefID":"k8pages","process_action":"ReadFilter","clause":"groupID=4 and pageID>=0"}
+19.10.2024 12:39:48 {"datadefID":"k8pages","process_action":"ReadFilter","clause":"groupID=4 and pageID>=0"}
+19.10.2024 12:40:11 {"page":"masterdata","datadefID":"k8datadefinitions"}
+19.10.2024 12:40:12 {"page":"masterdata","datadefID":"k8datadefinitions"}
+19.10.2024 12:40:12 {"datadefID":"k8datadefinitions","process_action":"ReadFilter","clause":""}
+19.10.2024 12:41:21 []
+19.10.2024 12:41:21 []
+19.10.2024 12:41:21 {"prepare_optionsadditional.datadefID":"k8pages"}
+19.10.2024 12:41:21 []
+19.10.2024 12:41:21 []
+19.10.2024 12:41:21 []
+19.10.2024 12:41:21 {"datadefID":"k8pages","process_action":"ReadFilter","clause":"groupID=4 and pageID>=0"}
+19.10.2024 12:41:21 {"datadefID":"k8pages","process_action":"ReadFilter","clause":"groupID=4 and pageID>=0"}
+19.10.2024 12:41:27 {"page":"masterdata","datadefID":"1"}
+19.10.2024 12:41:27 {"function":"getDatadefinition.before html","datadefID":"1","table":"","ret":0,"headtitlecolumn":"","placeholders":false,"objectives":1}
+19.10.2024 12:41:27 {"page":"masterdata","datadefID":"1"}
+19.10.2024 12:41:27 {"datadefID":"1","process_action":"ReadFilter","clause":""}
+19.10.2024 12:41:27 {"function":"getDatadefinition.before html","datadefID":"1","table":"","ret":1,"headtitlecolumn":"","placeholders":false,"objectives":-1}
+19.10.2024 12:41:32 {"page":"masterdata","datadefID":"k8datadefinitions"}
+19.10.2024 12:41:32 {"page":"masterdata","datadefID":"k8datadefinitions"}
+19.10.2024 12:41:32 {"datadefID":"k8datadefinitions","process_action":"ReadFilter","clause":""}
+20.10.2024 06:06:38 {"prepare_optionsadditional.datadefID":"k8pages"}
+20.10.2024 06:06:39 datadefID
+20.10.2024 06:06:39 process_action
+20.10.2024 06:06:39 clause

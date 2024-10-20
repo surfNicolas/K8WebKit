@@ -1,0 +1,376 @@
+{
+    "datadefID": "k8menuentries",
+    "table": "k8menuentries",
+    "name": "Menu entries",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+  "headtitle":"Menu",
+  "headdescription":"Here you can define your Menu online",
+    "parentcolumn":"parentID",
+    "treearrayname":"_children",
+    "rightcheck": 1,
+    "key": "IDentry",
+    "columns": [
+        {
+            "Field": "IDentry",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "IDentry",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "parentID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "parentID",
+            "myextra": ""
+        },
+        {
+            "Field": "sort",
+            "Type": "float",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "FLOAT",
+            "size": 0,
+            "fieldname": "sort",
+            "myextra": ""
+        },
+        {
+            "Field": "ID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "ID",
+            "myextra": ""
+        },
+        {
+            "Field": "mypage",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "mypage",
+            "myextra": ""
+        },
+        {
+            "Field": "activeby",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "activeby",
+            "myextra": ""
+        },
+        {
+            "Field": "href",
+            "Type": "varchar(254)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "href",
+            "myextra": ""
+        },
+        {
+            "Field": "target",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "target",
+            "myextra": ""
+        },
+        {
+            "Field": "title",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "title",
+            "myextra": ""
+        },
+        {
+            "Field": "condition",
+            "Type": "varchar(254)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "condition",
+            "myextra": ""
+        },
+        {
+            "Field": "li_attributes",
+            "Type": "varchar(254)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "li_attributes",
+            "myextra": ""
+        },
+        {
+            "Field": "a_attributes",
+            "Type": "varchar(254)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "a_attributes",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Extra": "",
+            "mytype": "INT",
+            "size": "10",
+            "fieldname": "creatorID",
+            "myextra": "",
+            "noupdate": 1,
+            "noinsert": 1
+        }
+    ],
+    "masterdata": {
+        "url_new": "index.php?page=form&datadefID=k8menuentries&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8menuentries&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8menuentries",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8menuentries&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8menuentries&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8menuentries&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8menuentries",
+            "process_action": "ReadFilter"
+        },
+        "defaultvalues":{
+          "parentID":0
+        },
+        "bGETfilters":false,
+        "defaultrights":true,
+        "clause":"ifnull(parentID,0)=0",
+        "sql_derived": "select k8menuentries.*,k8login.username,'' as k8select FROM k8menuentries LEFT OUTER JOIN k8login ON k8menuentries.creatorID=k8login.userID WHERE 1=1",
+        "sql_orderby":"sort"
+    },
+    "tabulator": {
+        "dataTree":true,
+        "dataTreeElementColumn":"title",
+        "dataTreeStartExpanded":true,
+        "columns": [
+            {
+                "title": "IDentry",
+                "field": "IDentry",
+                "headerFilter": false,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "parentID",
+                "field": "parentID",
+                "headerFilter": false,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "title",
+                "field": "title",
+                "headerFilter": false
+            },
+            {
+                "title": "sort",
+                "field": "sort",
+                "headerFilter": false,
+                "hozAlign": "right",
+                "width": "80",
+                "formatter": "money",
+                "formatterParams": {
+                    "decimal": "GLOBALS_decimal_point",
+                    "thousand": "GLOBALS_thousands_sep",
+                    "precision": 2
+                }
+            },
+            {
+                "title": "ID",
+                "field": "ID",
+                "headerFilter": false,
+        "visible":false,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            {
+                "title": "mypage",
+                "field": "mypage",
+                "headerFilter": false
+            },
+            {
+                "title": "activeby",
+                "field": "activeby",
+                "headerFilter": false,
+                "width": "80"
+            },
+            {
+                "title": "href",
+                "field": "href",
+                "headerFilter": false
+            },
+            {
+                "title": "target",
+                "field": "target",
+        "visible":false,
+                "headerFilter": false
+            },
+            {
+                "title": "condition",
+                "field": "condition",
+        "visible":false,
+                "headerFilter": false
+            },
+            {
+                "title": "li_attributes",
+                "field": "li_attributes",
+                "headerFilter": false,
+                "visible": false
+            },
+            {
+                "title": "a_attributes",
+                "field": "a_attributes",
+                "headerFilter": false,
+                "visible": false
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible":false,
+                "width": "80"
+            },
+            {
+                "title": "creator name",
+                "field": "username",
+                "headerFilter": false,
+                "width": "140"
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "IDentry",
+                "type": "hidden",
+                "label": "IDentry"
+            },
+            {
+                "name": "parentID",
+                "type": "hidden",
+                "label": "parentID"
+            },
+            {
+                "name": "title",
+                "type": "text",
+                "label": "title",
+                "maxLength": 50
+            },
+            {
+                "name": "sort",
+                "type": "number",
+                "attributes":{
+                  "step":"0.01"
+                },
+                "label": "sort"
+            },
+            {
+                "name": "ID",
+                "type": "hidden",
+                "label": "ID"
+            },
+            {
+                "name": "mypage",
+                "type": "text",
+                "label": "mypage",
+                "maxLength": 50
+            },
+            {
+                "name": "activeby",
+                "tagName": "select",
+                "options":["","page","url","basename"],
+                "label": "activeby"
+            },
+            {
+                "name": "href",
+                "type": "text",
+                "label": "href",
+                "maxLength": 254
+            },
+            {
+                "name": "target",
+                "type": "text",
+                "label": "target",
+                "maxLength": 50
+            },
+            {
+                "name": "condition",
+                "type": "text",
+                "label": "condition",
+                "maxLength": 254
+            },
+            {
+                "name": "li_attributes",
+                "type": "text",
+                "label": "li_attributes",
+                "maxLength": 254
+            },
+            {
+                "name": "a_attributes",
+                "type": "text",
+                "label": "a_attributes",
+                "maxLength": 254
+            },
+            {
+              "fieldwraptemplate":"<div class=\"row mb-3\"><div class=\"offset-md-3 col-9\"><a href=\"https://k8webkit.com/k8pages/doc_minicms\" target=\"_blank\">Docu</a></div></div>"
+            }
+        ]
+    }
+}

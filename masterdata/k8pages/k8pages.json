@@ -1,0 +1,683 @@
+{
+    "datadefID": "k8pages",
+    "table": "k8pages",
+    "name": "Pages",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+
+    "headtitle": "Pages",
+    "headdescription": "This is the catalog of the pages",
+
+    "headtitlecolumn": "headtitle",
+    "headdescriptioncolumn": "headdescription",
+    "headimagecolumn": "image_file",
+    "head":["<script src=\"{{root}}tinymce/tinymce.js\"></script>"],
+    "head_end": ["<script src=\"{{root}}masterdata\/k8pages\/k8pages.js\"><\/script>"],
+    "rightcheck": 1,
+    "key": "pageID",
+    "displaycolumn": "marking",
+    "optionsadditional":[
+      {
+        "datadefID":"k8groups",
+        "column_mapping":{"value":"groupID","text":"title"},
+        "fieldname":"groupID",
+        "emptytext":"please select",
+        "defaultclause":"type='page_group'"
+      }
+    ],
+    "XXXXfoot_nodefault":false,
+    "columns": [
+        {
+            "Field": "pageID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "pageID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "titleID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "titleID",
+            "myextra": ""
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID",
+            "myextra": ""
+        },
+        {
+            "Field": "parentID",
+            "Type": "int(11)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "parentID",
+            "myextra": ""
+        },
+        {
+            "Field": "groupID",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "groupID",
+            "myextra": ""
+        },
+        {
+            "Field": "classmain",
+            "Type": "varchar(100)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 100,
+            "fieldname": "classmain",
+            "myextra": ""
+        },
+        {
+            "Field": "sort",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "sort",
+            "myextra": ""
+        },
+        {
+            "Field": "language",
+            "Type": "int(11)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "language",
+            "myextra": ""
+        },
+        {
+            "Field": "marking",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "UNI",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "marking",
+            "myextra": ""
+        },
+        {
+            "Field": "headtitle",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "headtitle",
+            "myextra": ""
+        },
+        {
+            "Field": "headdescription",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "headdescription",
+            "myextra": ""
+        },
+        {
+            "Field": "headkeywords",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "headkeywords",
+            "myextra": ""
+        },
+        {
+            "Field": "head",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "head",
+            "myextra": ""
+        },
+        {
+            "Field": "h1",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "h1",
+            "myextra": ""
+        },
+        {
+            "Field": "preview",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "preview",
+            "myextra": ""
+        },
+        {
+            "Field": "content",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "content",
+            "myextra": ""
+        },
+        {
+            "Field": "site",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "site",
+            "myextra": ""
+        },
+        {
+            "Field": "settings",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "settings",
+            "myextra": ""
+        },
+        {
+            "Field": "foot",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "foot",
+            "myextra": ""
+        },
+        {
+            "Field": "active",
+            "Type": "tinyint(4)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TINYINT",
+            "size": 4,
+            "fieldname": "active",
+            "myextra": ""
+        },
+        {
+            "Field": "pageIDprevious",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "pageIDprevious",
+            "myextra": ""
+        },
+        {
+            "Field": "pageIDnext",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "pageIDnext",
+            "myextra": ""
+        },
+        {
+            "Field": "datetimechanged",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datetimechanged",
+            "myextra": ""
+        },
+        {
+            "Field": "datetimecreated",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datetimecreated",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "creatorID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "control_mode":1,
+        "edittype":5,
+        "selector":"#html0",
+        "defaultvalues":{
+          "classmain":"container"
+        },
+        "filters_masterdata":[{"field":"pageID","type":">=","value":"0"}],
+        "menuleftobj":{
+          "button":{
+            "text":"",
+            "carettype":0
+          },
+          "items":[
+            {"value":"preview","label":"Preview detail"},
+            {"value":"prevdatadef","label":"Preview catalog"}
+          ]
+        },
+        "url_new": "index.php?page=form&datadefID=k8pages&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8pages&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8pages",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8pages&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8pages&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8pages&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8pages",
+            "process_action": "ReadFilter"
+        },
+        "upload":{
+          "enabled":true,
+          "settings":{
+            "showtext":true
+          }
+        },
+        "include":{
+            "getEntries":"masterdata/k8pages/k8pages_getEntries.php"
+        },
+        "sql_derived": "select k8pages.*,k8groups.title as grouptext,k8login.username,'' as k8select FROM k8pages LEFT OUTER JOIN k8groups ON k8groups.groupID=k8pages.groupID LEFT OUTER JOIN k8login ON k8pages.creatorID=k8login.userID WHERE 1=1",
+        "sql_orderby": "headtitle"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "pageID",
+                "field": "pageID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "100"
+            },
+            {
+                "title": "titleID",
+                "field": "titleID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "parentID",
+                "field": "parentID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible":false,
+                "width": "80"
+            },
+            {
+                "title": "groupID",
+                "field": "groupID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            {
+                "title": "grouptext",
+                "field": "grouptext",
+                "headerFilter": true
+            },
+            {
+                "title": "classmain",
+                "field": "classmain",
+                "visible":false,
+                "headerFilter": true
+            },
+            {
+                "title": "sort",
+                "field": "sort",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            {
+                "title": "language",
+                "field": "language",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible":false,
+                "width": "80"
+            },
+            {
+                "title": "marking",
+                "field": "marking",
+                "headerFilter": true
+            },
+            {
+                "title": "headtitle",
+                "field": "headtitle",
+                "headerFilter": true
+            },
+            {
+                "title": "headdescription",
+                "field": "headdescription",
+                "headerFilter": true
+            },
+            {
+                "title": "headkeywords",
+                "field": "headkeywords",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "head",
+                "field": "head",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "h1",
+                "field": "h1",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "preview",
+                "field": "preview",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "content",
+                "field": "content",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "active",
+                "field": "active",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "pageIDprevious",
+                "field": "pageIDprevious",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "pageIDnext",
+                "field": "pageIDnext",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "datetimechanged",
+                "field": "datetimechanged",
+                "headerFilter": "input",
+                "width": 160,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                },
+                "visible": false
+            },
+            {
+                "title": "datetimecreated",
+                "field": "datetimecreated",
+                "headerFilter": "input",
+                "width": 160,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                },
+                "visible": false
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "pageID",
+                "type": "hidden",
+                "label": "pageID"
+            },
+            {
+                "name": "titleID",
+                "type": "number",
+                "active":false,
+                "label": "titleID"
+            },
+            {
+                "name": "parentID",
+                "active":false,
+                "type": "number",
+                "label": "parentID"
+            },
+            {
+                "name": "sort",
+                "type": "number",
+                "label": "sort"
+            },
+            {
+                "name": "language",
+                "active":false,
+                "type": "number",
+                "label": "language"
+            },
+            {
+                "name": "marking",
+                "type": "text",
+                "label": "marking",
+                "required":true,
+                "maxLength": 50
+            },
+            {
+                "name": "headtitle",
+                "type": "text",
+                "label": "headtitle",
+                "maxLength": 255
+            },
+            {
+                "name": "headdescription",
+                "tagName": "textarea",
+                "label": "headdescription",
+                "maxLength": 255
+            },
+            {
+                "name": "headkeywords",
+                "type": "text",
+                "label": "headkeywords",
+                "maxLength": 255
+            },
+            {
+                "name": "head",
+                "active":false,
+                "tagName": "textarea",
+                "label": "head"
+            },
+            {
+                "name": "h1",
+                "active":false,
+                "type": "text",
+                "label": "h1",
+                "maxLength": 255
+            },
+            {
+                "name": "classmain",
+                "type": "text",
+                "label": "classmain",
+                "attributes": {
+                    "maxlength": 100
+                }
+            },
+            {
+                "name": "groupID",
+                "tagName": "select",
+                "label": "groupID"
+            },
+            {
+                "fieldwraptemplate": "<div class=\"px-1 bg-light\">{{labelelement}}</div><div class=\"mb-3\">{{fieldelement}}</div>",
+                "name": "preview",
+                "tagName": "textarea",
+                "fieldclass": "form-control tinymce",
+                "label": "preview"
+            },
+            {
+                "fieldwraptemplate": "<div class=\"px-1 bg-light\">{{labelelement}}</div><div class=\"mb-3\">{{fieldelement}}</div>",
+                "name": "content",
+                "tagName": "textarea",
+                "fieldclass": "form-control tinymce",
+                "label": "content"
+            },
+            {
+                "name": "head",
+                "tagName": "textarea",
+                "label": "head lines"
+            },
+            {
+                "name": "site",
+                "tagName": "textarea",
+                "label": "site"
+            },
+            {
+                "name": "foot",
+                "tagName": "textarea",
+                "label": "foot lines"
+            },
+            {
+                "name": "settings",
+                "tagName": "textarea",
+                "label": "settings"
+            },
+            {
+                "name": "active",
+                "active":false,
+                "type": "number",
+                "label": "active"
+            },
+            {
+                "name": "pageIDprevious",
+                "active":false,
+                "type": "number",
+                "label": "pageIDprevious"
+            },
+            {
+                "name": "pageIDnext",
+                "active":false,
+                "type": "number",
+                "label": "pageIDnext"
+            },
+            {
+                "name": "datetimechanged",
+                "active":false,
+                "type": "datetime-local",
+                "label": "datetimechanged"
+            }
+        ]
+    },
+    "html":{
+      "detail":{
+        "container":"<div class=\"k8-detail\"> <div class=\"js_rec_container rec_container\" data-rec_indexmax=\"-1\" data-rec_object=\"\"><div class=\"js_rec_records rec_records\"> <!-- here all records will be inserted --> </div> </div> </div>",
+        "record":"<div class=\"js_rec_record rec_record\" data-keyvalue=\"{{keyvalue}}\" data-rec_index=\"{{index}}\"> <div class=\"row\"> <div class=\"col-sm-12 k8-margin-top-normal k8-margin-bottom-6\"><h1>{{headtitle}}</h1>{{content}}</div></div>",
+        "recinput":"<div class=\"js_rec_record rec_record\" data-keyvalue=\"{{keyvalue}}\" data-rec_index=\"{{index}}\"><div class=\"js_inlineform\">{{js_dataform}}</div><hr></div>"
+      }
+    }
+}

@@ -1,0 +1,11 @@
+/*#catalog_basic_units .rec_headline,#catalog_item_group .rec_headline,#catalog_customer_group .rec_headline */
+.k8-baisc-groups .rec_headline
+{
+  overflow-y: scroll;
+}
+/*#catalog_page_group .rec_records, #catalog_basic_units .rec_records, #catalog_item_group .rec_records, #catalog_customer_group .rec_records{*/
+.k8-basic-groups .rec_records{
+  overflow-y: auto;
+  max-height: 200px;
+  min-height: 200px;
+}

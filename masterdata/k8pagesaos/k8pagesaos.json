@@ -1,0 +1,37 @@
+{
+    "datadefID": "k8pagesaos",
+    "table": "k8pages",
+    "name": "Pages",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "headtitle": "Pages",
+    "headdescription": "This is the catalog of the pages",
+    "head":["<link href=\"http://localhost/webkitb5/aos/aos.css\" rel=\"stylesheet\">"],
+    "head_end":["<script src=\"{{root}}masterdata/k8pagesaos/k8pagesaos.js\"></script>"],
+    "rightcheck": 1,
+    "key": "pageID",
+    "displaycolumn": "marking",
+    "masterdata": {
+        "control_mode":1,
+        "selector":"#html0",
+        "htmlout":"detail",
+        "edittype":5,
+        "url_new": "index.php?page=form&datadefID=k8pages&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8pages&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8pages",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8pages&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8pages&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8pages&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8pages",
+            "process_action": "ReadFilter"
+        },
+        "upload":{
+          "enabled":true,
+          "settings":{
+            "showtext":true
+          }
+        }
+    }
+}

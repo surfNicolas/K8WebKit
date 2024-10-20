@@ -1,0 +1,74 @@
+{
+    "datadefID":"k8searchuser",
+    "table": "k8login",
+    "name": "Users",
+    "objectclass": "data_accessclass",
+    "key": "userID",
+    "displaycolumn":"username",
+    "datalistcolumn":"username",
+    "columns": [
+        {
+            "Field": "userID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "userID"
+        },
+        {
+            "Field": "username",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "username"
+        }
+    ],
+    "rightcheck": 1,
+    "masterdata": {
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "rightuser_create": 0,
+        "defaultrights":false,
+        "upload":{"enabled":true},
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8searchuser",
+            "process_action": "ReadFilter"
+        },
+        "sql_statement":"SELECT k8login.userID, username §select FROM k8login WHERE 1=1",
+        "sql_orderby":"username",
+        "rights":{
+            "read":{
+                "1":1,
+                "2":1,
+                "3":1
+            }
+        }
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "image",
+                "field": "image_file",
+                "formatter":"image",
+                "formatterParams":{
+                  "height":"50px"
+                },
+                "width": 100,
+                "headerFilter": false
+            },
+            {
+                "title": "username",
+                "field": "username",
+                "headerFilter": true
+            }
+        ]
+    }
+}

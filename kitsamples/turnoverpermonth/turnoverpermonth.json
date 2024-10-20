@@ -1,0 +1,55 @@
+{
+  "datadefID":"turnoverpermonth",
+  "headtitle":"Turn over",
+  "headdescription":"Example Chart.js: it is easy to combine Chart.js together with the K8 Web Kit elements.",
+  "headimage":"kitsamples/customerturnover/customerturnover_1200_1.jpg",
+  "table": "k8documents",
+  "name": "Turnover per month",
+  "objectclass": "data_accessclass",
+  "key":"",
+  "rightcheck": 1,
+  "settingsadditional":["invoice"],
+  "head":["<script src=\"https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js\"></script>"],
+  "foot":["<script src=\"{{root}}kitsamples/turnoverpermonth/turnoverpermonth.js\"></script>"],  
+  "foot_nodefault":false,
+  "columns": [
+  ],
+  "masterdata": {
+      "datareadlimit":20,
+      "htmlout":"html",
+      "root": "",
+      "url_readfilter": "masterdata\/ProcessData.php",
+      "data_readfilter": {
+          "datadefID": "turnoverpermonth",
+          "process_action": "ReadFilter"
+      },
+      "defaultrights":false,
+      "rights":{
+          "read":{
+                  "0":2,
+                  "2":2,
+                  "3":2
+          }
+      },
+      "sql_statement":"SELECT DATE_FORMAT(docdate,'%Y%m') as x, YEAR(docdate) as year, MONTH(docdate) as month, Sum(ROUND(ifnull(amount_gross,0),2)) as y FROM k8documents WHERE 1=1 and DAYNAME(docdate) IS NOT NULL Group by year(docdate),month(docdate)",
+      "sql_orderby":" year(docdate),month(docdate)"
+  },
+  "tabulator":{
+    "columns":[
+      {
+          "title": "y",
+          "field": "y",
+          "headerFilter": true,
+          "hozAlign": "right",
+          "width": "80",
+          "formatter": "money",
+          "formatterParams": {
+              "decimal": "GLOBALS_decimal_point",
+              "thousand": "GLOBALS_thousands_sep",
+              "precision": 2
+          },
+          "visible": false
+      }
+    ]
+  }
+}

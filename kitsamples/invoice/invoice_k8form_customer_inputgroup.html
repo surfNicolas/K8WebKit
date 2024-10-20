@@ -1,0 +1,16 @@
+<div class="input-group js_searchbox_group" data-fieldlist="partnername=name1,name1,name2,street,country,code,city">
+    <!--<span class="input-group-text" onclick="searchBox_delete(this);"><i class="bi-x-lg"></i></span>-->
+    <div class="input-group-btn dropdown">
+      <button class="btn dropdown-toggle" style="background-color: #e9ecef; border: 1px solid #ced4da; border-radius: 0.25rem 0 0 0.25rem" data-bs-toggle="dropdown" aria-expanded="false"></button>
+      <ul class="dropdown-menu js_action" style="z-index: 10000000; position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 40px);" data-popper-placement="bottom-start">
+          <li><a data-value="remove" class="dropdown-item js js_menuleft js_customer_remove" href="#" ><i class="bi-x-lg"></i> Remove</a></li>
+          <li><a data-value="edit" class="dropdown-item js js_menuleft js_customer_edit" href="#"><i class="bi-pencil-square"></i> Edit</a></li>
+          <li><a data-value="businesscard" class="dropdown-item js js_menuleft js_customer_card" href="#"><i class="bi-person-vcard"></i> Card</a></li>
+       </ul>
+    </div>
+
+    <input type="hidden" name="accountID">
+    <input type="text" class="form-control k8-flex-100-fix" name="partnernumber">
+    <input type="text" class="form-control k8-flex-200" name="partnername">
+    <span data-action="searchBox_open_customer" class="js_rec_action input-group-text"><i class="bi-search"></i></span>
+</div>

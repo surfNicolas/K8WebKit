@@ -1,0 +1,503 @@
+{
+    "datadefID":"k8components",
+    "name":"Item master data",
+    "table":"k8components",
+    "key":"componentID",
+    "objectclass":"data_accessclass",
+    "rightcheck":true,
+    "datalistcolumn":"text1",
+    "displaycolumn":"text1",
+    "searchcolumn":"text1",
+    "searchcolumn1":"componentnumber",
+    "searchcolumn2":"text1",
+    "headtitle":"Items",
+    "headdescription":"Filter and edit the items in the master data form. You have 2 sections, above the listing with filter and sort, below the form to edit the data.",
+    "headimage":"img/item-masterdata.jpg",
+    "headtitlecolumn":"text1",
+    "headdescriptioncolumn":"textdimensions",
+    "headimagecolumn":"image_file",
+    "php_include":["kitsamples/k8components/k8components_php_include.php"],
+    "head":["<script src='{{root}}tinymce/tinymce.js'></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js\"></script>"],
+    "head_include":["kitsamples/k8components/k8components_head_include.php"],
+    "head_end":[
+      "<script src=\"{{root}}kitsamples/k8components/k8components_head_end_arrays.js\"></script>",
+      "<script src=\"{{root}}kitsamples/k8components/k8components_catalog.js\"></script>",
+      "<script src=\"{{root}}kitsamples/k8components/k8components_validate.js\"></script>",
+      "<script src='{{root}}kitsamples/k8components/k8components_detail.js'></script>",
+      "<script src='{{root}}kitsamples/k8components/k8components_chartjs.js'></script>"
+    ],
+    "optionsadditional":[
+      {
+        "datadefID":"k8groups",
+        "column_mapping":{"text":"title"},
+        "emptytext":"please select",
+        "fieldname":"category",
+        "defaultclause":"type='item_group'"
+      }
+    ],
+
+    "settingsadditional":["k8groups"],
+    "columns": [
+        {
+            "Field": "componentID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "componentID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID",
+            "myextra": ""
+        },
+        {
+            "Field": "componentnumber",
+            "Type": "varchar(20)",
+            "Null": "YES",
+            "Key": "MUL",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 20,
+            "fieldname": "componentnumber",
+            "myextra": ""
+        },
+        {
+            "Field": "status",
+            "Type": "tinyint(4)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "TINYINT",
+            "size": 4,
+            "fieldname": "status",
+            "myextra": ""
+        },
+        {
+            "Field": "text1",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "text1",
+            "myextra": ""
+        },
+        {
+            "Field": "text2",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "text2",
+            "myextra": ""
+        },
+        {
+            "Field": "textdimensions",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "textdimensions",
+            "myextra": ""
+        },
+        {
+            "Field": "descriptionlong",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "descriptionlong",
+            "myextra": ""
+        },
+        {
+            "Field": "category",
+            "Type": "varchar(20)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 20,
+            "fieldname": "category",
+            "myextra": ""
+        },
+        {
+            "Field": "baseunit",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "baseunit",
+            "myextra": ""
+        },
+        {
+            "Field": "salesunit",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "salesunit",
+            "myextra": ""
+        },
+        {
+            "Field": "vatclass",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "vatclass",
+            "myextra": ""
+        },
+        {
+            "Field": "conversionfactorsales",
+            "Type": "float",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "FLOAT",
+            "size": 0,
+            "fieldname": "conversionfactorsales",
+            "myextra": ""
+        },
+        {
+            "Field": "servicefactor",
+            "Type": "decimal(16,8)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DECIMAL",
+            "size": 16,
+            "fieldname": "servicefactor",
+            "myextra": ""
+        },
+        {
+            "Field": "price",
+            "Type": "float",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "FLOAT",
+            "size": 0,
+            "fieldname": "price",
+            "myextra": ""
+        },
+        {
+            "Field": "dateactive",
+            "Type": "date",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATE",
+            "size": 0,
+            "fieldname": "dateactive",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "creatorID",
+            "myextra": ""
+        },
+        {
+            "Field": "datecreated",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datecreated",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "disprecdirect":2,
+        "edittype":5,
+        "formmode":3,
+        "placeholder_mode":2,
+        "pagination":"external",
+        "paginationsize":2,
+        "url_new":  "index.php?page=form&page_mode=2&datadefID=k8components&process_action=New",
+        "url_edit": "index.php?page=form&page_mode=2&datadefID=k8components&process_action=Edit",
+        "url_detail": "index.php?page=detail&datadefID=k8components",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=k8components&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=k8components&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8components&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8components&process_action=Save",
+        "url_del":  "masterdata\/ProcessData.php?datadefID=k8components&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8components",
+            "process_action": "ReadFilter"
+        },
+        "filters_catalog":{"field":"status","type":"=","value":1},
+        "sql_derived": "SELECT k8components.*, username§select FROM k8components LEFT OUTER JOIN k8login ON k8components.creatorID=userID WHERE 1=1",
+        "sql_orderby": "datecreated desc, text1",
+        "upload":{
+          "enabled":true,
+          "settings":{
+            "showtext":true,
+            "dropzone":{
+                "resizeWidth":1000,
+                "resizeHeight":750,
+                "resizeMethod":"contain",
+                "maxFilesize":5,
+                "acceptedFiles": ".jpeg,.jpg,.png,.gif",
+                "resize_not_working":false
+            }
+          }
+        },
+        "include":{
+          "validate":"kitsamples/k8components/k8components_validate.php"
+        }
+    },
+    "tabulator":{
+        "selectable":true,
+        "columns":[
+            {
+                "title": "componentID",
+                "field": "componentID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {"title": "Item no","field":"componentnumber","width":100,"headerFilter": true},
+            {"title": "Text 1","field":"text1","headerFilter": true},
+            {
+                "title": "text2",
+                "field": "text2",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "textdimensions",
+                "field": "textdimensions",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "descriptionlong",
+                "field": "descriptionlong",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "category",
+                "field": "category",
+                "headerFilter": true,
+                "visible": true
+            },
+            {
+                "title": "baseunit",
+                "field": "baseunit",
+                "headerFilter": true,
+                "visible": false
+            },
+            {"title": "Sales unit","field":"salesunit","width":60,"headerFilter": true},
+            {
+                "title": "vatclass",
+                "field": "vatclass",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "conversionfactorsales",
+                "field": "conversionfactorsales",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "formatter": "money",
+                "formatterParams": {
+                    "decimal": ",",
+                    "thousand": ".",
+                    "precision": 2
+                },
+                "visible": false
+            },
+            {"field":"price","title": "Price","hozAlign": "right","width": "80","headerFilter": true,
+             "formatter":"money",
+             "formatterParams":{"decimal":"GLOBALS_decimal_point","thousand":"GLOBALS_thousands_sep","precision":2}
+            },
+            {"title": "attached","field":"datecreated","width":160,"headerFilter": "input",
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                }
+            },
+            {
+                "title": "status",
+                "field": "status",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            
+            {"title": "username","field":"username","width":100,"headerFilter": true}
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "labelclass": "col-sm-3 col-form-label",
+        "fieldwrapclass": "controls col-sm-9",
+        "containers": [
+          {
+            "template": "<div class=\"row\">{{innerHTML}}</div>",
+            "containers": [
+              {
+                "template": "<div class=\"col-md-6\">{{innerHTML}}</div>",
+    
+                "fields": [
+                  {
+                      "name": "componentID",
+                      "type": "hidden"
+                  },
+                  {
+                      "name": "componentnumber",
+                      "type": "text",
+                      "attributes":{
+                        "pattern":"[0-9]{6}",
+                        "placeholder":"6 digits"
+                      },
+                      "label": "componentnumber",
+                      "required":true
+                  },
+                  {
+                      "name": "text1",
+                      "type": "text",
+                      "label": "text1",
+                      "required":true
+                  },
+                  {
+                      "name": "text2",
+                      "type": "text",
+                      "label": "text2"
+                  },
+                  {
+                      "tagName": "textarea",
+                      "name": "textdimensions",
+                      "row":"7",
+                      "label": "textdimensions"
+                  }
+                ]
+              },
+              {
+                "template": "<div class=\"col-md-6\">{{innerHTML}}</div>",
+                "fields": [
+                  {
+                    "tagName": "select",
+                    "name": "category",
+                    "label": "category"
+                  },
+                  {
+                      "tagName": "select",
+                      "name": "baseunit",
+                      "label": "baseunit",
+                      "options": [{"value":"pc","text":"pc"},{"value":"m","text":"m"},{"value":"kg","text":"kg"}]
+                  },
+                  {
+                      "tagName": "select",
+                      "name": "salesunit",
+                      "label": "salesunit",
+                      "options": [{"value":"pc","text":"pc"},{"value":"m","text":"m"},{"value":"kg","text":"kg"}]
+                  },
+                  {
+                      "name": "conversionfactorsales",
+                      "type": "number",
+                      "label": "conversionfactorsales"
+                  },
+                  {
+                      "tagName": "select",
+                      "name": "vatclass",
+                      "label": "vatclass",
+                      "options":[7,10,19]
+                  },
+                  {
+                      "name": "price",
+                      "type": "number",
+                      "label": "price",
+                      "step": "0.01"
+                  },
+                  {
+                      "tagName": "select",
+                      "name": "status",
+                      "label": "status",
+                      "options":[
+                        {"value":"0","text":"in preparation"},
+                        {"value":"1","text":"published"},
+                        {"value":"2","text":"closed"}
+                      ]
+                  },
+                  {
+                    "fieldwraptemplate": "<div style=\"font-size:0.9em\" class=\"k8-margin-bottom-normal text-end\"><span>#ls#please save it 'in preparation' before you upload an image#</span></div>"
+                  }
+              ]
+              }
+            ]
+          },
+          {
+            "template": "<div>{{innerHTML}}</div>",
+            "labelclass":"col-sm-12",
+            "fieldwrapclass":"col-sm-12",
+            "fields":[
+                {
+                    "tagName": "textarea",
+                    "name": "descriptionlong",
+                    "label": "descriptionlong",
+                    "fieldclass":"form-control tinymce"
+                }
+            ]
+          }
+        ]
+    }
+}    

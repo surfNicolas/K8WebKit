@@ -1,0 +1,31 @@
+{
+  "k8form": {
+    "selector": ".js_dataform",
+    "templatetype": "masterform",
+    "labelclass": "col-sm-3 col-form-label",
+    "fieldwrapclass": "controls col-sm-9",
+    "containers": [
+      {
+        "template": "<div class=\"row\">{{innerHTML}}</div>",
+        "containers": [
+          {
+            "template": "<div class=\"col-md-6\">{{innerHTML}}</div>",
+            "fields": [
+              {
+                "name": "field1"
+              }
+            ]
+          },
+          {
+            "template": "<div class=\"col-md-6\">{{innerHTML}}</div>",
+            "fields": [
+              {
+                "name": "field2"
+              }
+            ]
+          }
+        ]  
+      }
+    ]
+  }
+}

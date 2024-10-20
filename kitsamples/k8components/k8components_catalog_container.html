@@ -1,0 +1,35 @@
+<div class="k8-example-catalog">
+  <div class="js_rec_container rec_container catalog" data-rec_indexmax="-1">
+    <div class="row js_rec_head js_catalog" id="searcharea">
+      <div class="col-sm-4 mt-3">
+        <h1>#ls#Item Catalog#</h1>
+      </div>
+      <div class="col-sm-8 mt-3">
+        <form id="filterform" method="GET">
+            <input type="hidden" name="datadefID">
+            <input type="hidden" name="page">
+            <div class="input-group mt-1" id="searchlineb5">
+                <input type="text" class="form-control js_fld_search" placeholder="Search" id="search" name="search" value=""/>
+                <div class="input-group-btn">
+                  <button type="submit" name="submit" class="js_rec_search btn btn-primary"><i class="bi-search"></i></button>
+                  {{control_new}}
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="js_rec_head js_member" style="display: none">
+        <div class="k8-flex-row">
+          <div class="k8-flex-100">
+            <h2>#ls#In Preparation#</h2>
+          </div>
+          <div class="k8-flex-100 text-end">
+            <button type="button" class="js_rec_new btn btn-primary">#ls#New#</button>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class="js_rec_records rec_records"></div>
+  </div>
+</div>

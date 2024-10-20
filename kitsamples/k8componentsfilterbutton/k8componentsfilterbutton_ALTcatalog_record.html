@@ -1,0 +1,29 @@
+<div class="js_rec_record rec_record" data-keyvalue="{{keyvalue}}" data-rec_index="{{index}}">
+  <div class="js_inlineform">
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="k8-box-square">
+              <div class="k8-box-content">
+                <img class="k8-image-{{image_orientation}}" src="{{image_file}}">
+              </div>
+          </div>
+        </div>        
+        <div class="col-sm-8">
+            <div class="k8-padding-side-small">
+                <div class="k8-link-main">
+                  {{control_edit}}
+                  <a href="index.php?page=detail&datadefID=k8components&keyvalue={{componentID}}">{{text1}}</a>
+                  {{control_delete}}
+                </div>
+                <div class="k8-content">
+                  <p>{{datecreated}} von {{username}}</p>
+                  <p>{{textdimensions}}</p>
+                  <p><strong>{{price}} EUR/{{salesunit}}</strong></p>
+                </div>
+
+            </div>
+        </div>        
+    </div>
+  </div>
+  <hr>
+</div>

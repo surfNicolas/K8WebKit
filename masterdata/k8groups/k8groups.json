@@ -1,0 +1,207 @@
+{
+    "withcolor":true,
+    "id": "k8groups",
+    "table": "k8groups",
+    "name": "k8groups",
+    "objectclass": "data_accessclass",
+    "key": "groupID",
+    "displaycolumn": "title",
+    "datalistcolumn": "title",
+    "rightcheck": 1,
+    "head_include":["masterdata/k8groups/k8groups_head_include.php"],
+    "head":["<link rel=\"stylesheet\" href=\"{{root}}masterdata/k8groups/k8groups.css\">"],
+    "foot":["<script src=\"{{root}}masterdata/k8groups/k8groups.js\"></script>"],
+    "columns": [
+        {
+            "Field": "groupID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "groupID",
+            "mynull": "NO",
+            "mykey": "PRI",
+            "mydefault": null,
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID"
+        },
+        {
+            "Field": "parentID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "parentID"
+        },
+        {
+            "Field": "sort",
+            "Type": "int(11)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "sort"
+        },
+        {
+            "Field": "type",
+            "Type": "varchar(20)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 20,
+            "fieldname": "type"
+        },
+        {
+            "Field": "title",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "title"
+        },
+        {
+            "Field": "value",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "value"
+        },
+        {
+            "Field": "fontcolor",
+            "Type": "varchar(30)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 30,
+            "fieldname": "fontcolor",
+            "myextra": ""
+        },
+        {
+            "Field": "backgroundcolor",
+            "Type": "varchar(30)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 30,
+            "fieldname": "backgroundcolor",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID"
+        }
+    ],
+    "backend":{
+        "foreignkeys":[
+            {"table":"k8components","key":"category","text":"already in items!","clause":""}
+        ]
+    },
+    "masterdata": {
+        "htmlout":"lineedit",
+        "edittype":6,
+        "placeholder_mode":2,
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "defaultvalues":{"fontcolor":"#000000","backgroundcolor":"#ffffff"},
+        "root": "",
+        "url_new": "index.php?page=form&datadefID=k8groups&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8groups&process_action=Edit&page_mode=2",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=k8groups&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=k8groups&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8groups&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8groups&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8groups&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID":"k8groups",
+            "process_action": "ReadFilter"
+        },
+        "defaultrights":1,
+        "rights":{
+            "create":{
+                "3":1
+            },
+            "read":{
+                    "0":1,
+                    "3":2
+            },
+            "update":{
+                    "3":10
+            },
+            "delete":{
+                    "3":10
+            }
+        }
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "parentID",
+                "field": "parentID",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "sort",
+                "field": "sort",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "type",
+                "field": "type",
+                "headerFilter": true
+            },
+            {
+                "title": "title",
+                "field": "title",
+                "headerFilter": true
+            },
+            {
+                "title": "value",
+                "field": "value",
+                "headerFilter": true
+            }
+        ]
+    }
+}

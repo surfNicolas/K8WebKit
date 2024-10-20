@@ -1,0 +1,273 @@
+{
+    "datadefID":"invoice",
+    "table": "k8documents",
+    "name": "Invoices",
+    "objectclass": "data_accessclass",
+    "key": "docID",
+    "headtitlecolumn":"docnumber",
+    "headdescriptioncolumn":"addressblock",
+    "headtitle":"Invoices",
+    "headdescription":"Write an easy Invoices with customer address and an itemlist. The prices are easily calculated. All form elements are transfered to a datastructre and easily saved",
+    "headimage":"kitsamples/invoice/Rechnung_mit_PDF.jpg",
+    "foot":["<script src=\"{{root}}kitsamples/invoice/invoice.js\"></script>"],
+    "settingsadditional":["k8components","customer"],
+    "masterkey":"accountID",
+    "tabulator": {
+        "columns": [
+            {
+                "title": "no",
+                "field": "docnumber",
+                "headerFilter": true,
+                "width": "60"
+            },
+            {
+                "title": "docdate",
+                "field": "docdate",
+                "headerFilter": "input",
+                "width": 100,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd",
+                    "outputFormat": "GLOBALS_tabulatordateformat"
+                }
+            },
+            {
+                "title": "partnernumber",
+                "field": "partnernumber",
+                "headerFilter": true,
+                "hozAlign": "left",
+                "width": "100"
+            },
+            {
+                "title": "name1",
+                "field": "name1",
+                "headerFilter": true,
+                "hozAlign": "left"
+            },
+            {
+                "title": "amount",
+                "field": "amount_gross",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "90",
+                "formatter": "money",
+                "formatterParams": {
+                    "decimal": "GLOBALS_decimal_point",
+                    "thousand": "GLOBALS_thousands_sep",
+                    "precision": 2
+                },
+                "bottomCalc":"sum",
+                "bottomCalcFormatter": "money",
+                "bottomCalcFormatterParams":{
+                  "decimal": "GLOBALS_decimal_point",
+                  "thousand": "GLOBALS_thousands_sep",
+                  "precision":2}
+            }
+        ]
+    },
+    "masterdata":{
+        "generate":1,
+        "childs_deletetrigger":false,
+        "object_mode":1,
+        "edittype":9,
+        "formmode":3,
+        "add_empty_rec":1,
+        "bwithdirty":true,
+        "url_new": "index.php?page=form&datadefID=invoice&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=invoice&process_action=Edit&page_mode=2",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=invoice&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=invoice&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=invoice&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=invoice&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=invoice&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "invoice",
+            "process_action": "ReadFilter"
+        },
+        "menuleftobj":{
+          "button":{
+            "text":""
+          },
+          "items":[
+            {"value":"PDF","label":"PDF","atlink":false}
+          ]
+        },
+        "rights":{
+            "read":{
+                    "0":2,
+                    "3":2
+            }
+        },
+        "sql_statement":"select k8documents.*, concat(partnernumber,' ',name1,' ',city) as partnerdisp, name1 as partnername,concat(k8documents.name1, '\n', k8documents.name2, CASE WHEN ifnull(k8documents.name2, '')='' THEN '' ELSE '\n' END, ifnull(k8documents.street, ''), '\n', ifnull(k8documents.country, ''), ' ', ifnull(k8documents.code, ''), ' ', ifnull(k8documents.city, '')) AS addressblock §select from k8documents WHERE 1=1 order by docnumber"
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "docID",
+                "type": "hidden",
+                "label": "docID"
+            },
+            {
+                "name": "doctypeID",
+                "type": "hidden"
+            },
+            {
+                "name": "docnumber",
+                "type": "number",
+                "label": "docnumber",
+                "required":true
+            },
+            {
+                "name": "docdate",
+                "type": "date",
+                "label": "docdate"
+            },
+            {
+                "identifier":"XXcustomer_search",
+                "active":false,
+                "inputgroup":{
+                    "fields":[
+                      {
+                          "tagName":"div",
+                          "fieldclass":"input-group-btn dropdown",
+                          "htmlelement":"dropdown"
+                      },
+                      {
+                          "type":"hidden",
+                          "name":"accountID"
+                      },
+                      {
+                          "type":"text",
+                          "fieldclass":"form-control k8-flex-100-fix",
+                          "name":"partnernumber"
+                      },
+                      {
+                          "type":"text",
+                          "fieldclass":"form-control k8-flex-200",
+                          "name":"partnername"
+                      },
+                      {
+                          "tagName":"span",
+                          "data-action":"searchBox_open_customer",
+                          "fieldclass":"js_rec_action input-group-text k8-input-group-addon",
+                          "innerHTML":"<i class=\"bi-search\"></i>"
+                      }
+                    ],
+                    "attributes":{
+                      "data-fieldlist":"partnername=name1,name1,name2,street,country,code,city"
+                    },
+                    "class":"js_searchbox_group input-group mb-1",
+                    "label": "partnernumber",
+                    "Xtemplate":"{{customer_inputgroup}}"
+                }
+            },
+            {
+                "type":"hidden",
+                "name":"partnernumber"
+            },
+            {
+                "identifier":"customer_search",
+                "active":true,
+                "inputgroup":{
+                    "attributes":{
+                      "data-fieldlist":"partnernumber=accountnumber,name1,name2,street,country,code,city"
+                    },
+                    "fields":[
+                      {
+                          "htmlelement":"dropdown"
+                      },
+                      {
+                          "type":"hidden",
+                          "name":"accountID"
+                      },
+                      {
+                          "name": "partnerdisp",
+                          "type": "text",
+                          "label": "customer",
+                          "maxLength": 100,
+                          "attributes":{
+                            "list": "partnerdisp_datalist",
+                            "autocomplete": "OFF"
+                          },
+                          "datalist":{
+                            "datadefID":"customer"
+                          }
+                      }
+                    ]
+                }
+            },
+            {
+                "name": "name1",
+                "type": "text",
+                "label": "name1",
+                "maxLength": 60
+            },
+            {
+                "name": "name2",
+                "type": "text",
+                "label": "name2",
+                "maxLength": 60
+            },
+            {
+                "name": "street",
+                "type": "text",
+                "label": "street",
+                "maxLength": 60
+            },
+            {
+                "tagName": "select",
+                "name": "country",
+                "type": "text",
+                "label": "country",
+                "options":[
+                  {"value":"DE","text":"DE: Germany"},
+                  {"value":"US","text":"US: United States"},
+                  {"value":"GB","text":"GB: United Kingdom"},
+                  {"value":"FR","text":"FR: France"}
+                ]
+            },
+            {
+              "inputgroup": {
+                "fields": [
+                  {
+                      "name": "code",
+                      "fieldclass_add":"k8-flex-100-fix",
+                      "type": "text",
+                      "maxLength": 10
+                  },
+                  {
+                      "name": "city",
+                      "type": "text",
+                      "maxLength": 60
+                  }
+                ],
+                "label": "Code / city"
+              }
+            },
+            {
+                "fieldwraptemplate":"{{items_container}}"
+            },
+            {
+                "name": "footer",
+                "tagName": "textarea",
+                "label": "footer"
+            }
+        ]
+    },
+    "childs":[
+        {
+            "objectclass":"data_accessclass",
+            "table": "k8documentitems",
+            "key":"itemID",
+            "fieldname":"items",
+            "rightcheck":0,
+            "masterkey":"docID",
+            "masterdata":{
+              "sql_statement":"select k8documentitems.* FROM k8documentitems WHERE 1=1 order by sort"
+            }
+        }
+    ]
+}

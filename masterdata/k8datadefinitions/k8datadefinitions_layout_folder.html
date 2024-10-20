@@ -1,0 +1,31 @@
+<div class="row g-0 px-2 ">
+  <div class="col-md-6 pt-2">
+     <h2 class="js_title">k8datadefinitions</h2>
+  </div>
+  <div class="col-md-6 pt-2 pb-1 text-end">
+    <button type="button" class="btn btn-secondary js_copy me-2"><i class="bi bi-copy"></i></button> 
+    <a class="js_jsonlint btn btn-secondary me-2" href="https://jsonlint.com/" target="_blank">JSON Editor</a>
+    <button id="file_new" type="button" class="btn btn-secondary js_rec_new">File&nbsp;new</button>
+  </div>
+</div>
+<div class="maindata">
+  <div class="row">
+    <div class="col-md-4">
+      <div id="folder" class="p-2 k8-border k8-flex-table" style="height: 400px;">
+        <p class="">no files</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div id="resizable" style="" class="mx-2 py-1">
+        <form class="k8-codemirror-resize-vertical">
+          <div class="row mb-1">
+            <label class="col-md-3 col-form-label" for="file">File name</label>
+            <div class="col-md-9"><input name="filename" type="text" id="filename" class="form-control" required="" maxlength="50"></div>
+          </div>
+          <textarea style="height:290px;" rows="10" class="form-control k8-margin-bottom-normal" id="texteditor"></textarea>
+          <div class="row"> <div class="col-1 js_dirty"></div> <div class="col-5 js_middle"></div> <div class="col-6"> <div class="text-end px-1"> <input type="button" name="save" class="btn btn-primary js_dirtyremove" id="save" value="Save"> <!--<button type="button" class="btn btn-light js_cancel js_rec_cancel">Cancel</button>--></div></div></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  

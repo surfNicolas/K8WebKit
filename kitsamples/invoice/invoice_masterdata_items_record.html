@@ -1,0 +1,39 @@
+<div class="js_rec_record k8-flex-row " data-rec_index="index_items">
+    <div class="k8-flex-60-fix recordmarker"><!--classwrap-->
+        {{control_delete}}
+        {{control_sort}}
+        <input type="hidden" name="items[index_items][itemID]">
+        <input type="hidden" name="items[index_items][sort]">
+    </div>
+    <div class="k8-flex-40"><!--classwrap-->
+        <input type="text" class="form-control" style="text-align: left;" name="items[index_items][position]">
+    </div>
+    <div class="k8-flex-100 input-group js_searchbox_group"><!--classwrap-->
+      <input type="text" class="k8-flex-empty form-control" name="items[index_items][componentnumber]" onChange="searchbox_search(this,undefined,insertComponent,settingsk8components)">
+      <input type="hidden" name="items[index_items][componentID]">
+      <button type="button" class="k8-flex-30-fix k8-btn-input-group js_rec_search btn btn-secondary" onclick="item_search(this);"><i class="bi-search"></i></button>
+    </div>
+    <div class="k8-flex-300"><!--classwrap-->
+        <input type="text" class="form-control" style="text-align: left;" maxlength="50" name="items[index_items][text1]">
+    </div>
+    <div class="k8-flex-100"><!--classwrap-->
+        <input type="number" step="0.01" class="form-control" style="text-align: right;" name="items[index_items][quantity]">
+    </div>
+
+    <div class="k8-flex-100"><!--classwrap-->
+        <select class="form-control" style="text-align: left;" name="items[index_items][salesunit]">
+          <option value=""></option>
+          <option value="x">x</option>
+          <option value="pc">pc</option>
+          <option value="m">m</option>
+          <option value="kg">kg</option>
+        </select> 
+    </div>
+
+    <div class="k8-flex-100"><!--classwrap-->
+        <input type="number" step="0.01" class="form-control" style="text-align: right;" name="items[index_items][pricesingle]">
+    </div>
+    <div class="k8-flex-fix-total"><!--classwrap-->
+        <input type="number" step="0.01" class="form-control" style="text-align: right;" name="items[index_items][pricetotal]" aria-disabled="true" disabled>
+    </div>
+</div>

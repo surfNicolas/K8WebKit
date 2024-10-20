@@ -1,0 +1,177 @@
+{
+    "datadefID":9,
+    "table": "k8languages",
+    "name": "k8languages",
+    "objectclass": "data_accessclass",
+    "key": "ID",
+    "columns": [
+        {
+            "Field": "ID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "ID",
+            "mynull": "NO",
+            "mykey": "PRI",
+            "mydefault": null,
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "pk",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "MUL",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "pk"
+        },
+        {
+            "Field": "languageID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "languageID"
+        },
+        {
+            "Field": "module",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "module"
+        },
+        {
+            "Field": "key",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "key"
+        },
+        {
+            "Field": "value",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "value"
+        }
+    ],
+    "rightcheck": 1,
+    "masterdata": {
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "listedit":true,
+        "url_new":  "index.php?page=form&page_mode=2&datadefID=9&process_action=New",
+        "url_edit": "index.php?page=form&page_mode=2&datadefID=9&process_action=Edit",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=9&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=9&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=9&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=9&process_action=Save",
+        "url_del":  "masterdata\/ProcessData.php?datadefID=9&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": 9,
+            "process_action": "ReadFilter"
+        },
+        "defaultrights":0,
+        "rights":{
+            "create":{
+                "2":2
+            },
+            "read":{
+                "0":2,
+                "3":2
+            },
+            "update":{
+                "2":2,
+                "3":2
+            },
+            "delete":{
+                "2":2
+            }
+        }
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "pk",
+                "field": "pk",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "languageID",
+                "field": "languageID",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "module",
+                "field": "module",
+                "headerFilter": true
+            },
+            {
+                "title": "key",
+                "field": "key",
+                "headerFilter": true
+            },
+            {
+                "title": "value",
+                "field": "value",
+                "headerFilter": true
+            }
+        ]
+    },
+    "jsonform": {
+        "schema": {
+            "ID": {
+                "type": "hidden",
+                "title": "ID"
+            },
+            "pk": {
+                "type": "number",
+                "title": "pk"
+            },
+            "languageID": {
+                "type": "number",
+                "title": "languageID"
+            },
+            "module": {
+                "type": "string",
+                "title": "module",
+                "maxLength": 50
+            },
+            "key": {
+                "type": "string",
+                "title": "key",
+                "maxLength": 50
+            },
+            "value": {
+                "type": "string",
+                "title": "value"
+            }
+        }
+    }
+}

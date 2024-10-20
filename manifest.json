@@ -1,0 +1,14 @@
+{
+  "name": "K8 Web Kit",
+  "display": "browser",
+  "orientation": "portrait",
+  "start_url": "/https://k8webkit.com/",
+  "description": "K8 Web Kit lets you easily create your web app.",
+  "icons": [
+    {
+      "src": "img/webkitfavicon.ico",
+      "sizes": "48x48",
+      "type": "image/ico"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<div class="js_rec_record k8_rec_record" data-keyvalue="{{keyvalue}}" data-rec_index="{{index}}">
+  <div class="container py-4">
+    <div class="js_inlineform"> <!-- for the form -->
+      <div class="row">
+        
+        <div class="col-sm-6">
+          <!-- image -->
+          <!-- <img class="img-fluid" src="{{image_file}}"  alt="{{text1}}"> -->
+          <div class="k8-ratio-2-1" style="background-image:url('{{image_file}}')"></div>
+        </div>  
+
+        <div class="col-sm-6">
+            <div class="k8-padding-side-small">
+                <div class="k8-link-main">
+                  {{control_edit}}
+                  <a class="js_detaillink" onclick="localStorage.setItem('catalog_datadefID','#settings#datadefID#')" href="index.php?page=detail&datadefID=k8pages&displayvalue={{marking}}">{{headtitle}}</a>
+                  {{control_delete}}
+                </div>
+                <div class="k8-content">
+                  <p>{{datetimecreated}} by {{username}}</p>
+                  <p>{{headdescription}}</p>
+                </div>
+            </div>
+        </div>  
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,333 @@
+{
+  "datadefID": "k8datadefinitions",
+  "table": "k8datadefinitions",
+  "name": "Elements online",
+  "revision": 2,
+  "headtitle":"Elements online",
+  "headimage":"masterdata/k8datadefinitions/K8 Webkit Software Prototyping.jpg",
+  "headdescription":"UNDER CONSTRUCTION! Design your tables and create online data elements from it, like: forms, lists, catalogs, charts, ... (10 templates to choose from)",
+  "objectclass": "data_accessclass",
+  "requiredfile": "masterdata\/class_data_accessclass.php",
+  "rightcheck": 1,
+  "head":[
+      "<link rel=\"stylesheet\" href=\"{{root}}masterdata/k8datadefinitions/k8datadefinitions.css\">",
+      "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.css\">",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.js\"></script>",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/javascript/javascript.js\"></script>",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/xml/xml.js\"></script>",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/css/css.js\"></script>",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/htmlmixed/htmlmixed.js\"></script>",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/sql/sql.min.js\"></script>"
+  ],
+  "key": "ID",
+  "head_end":[
+    "<script src=\"{{root}}masterdata/k8datadefinitions/k8datadefinitions_head_end.js\"></script>"
+  ],
+  "columns": [
+      {
+          "Field": "ID",
+          "Type": "int(10)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment",
+          "mytype": "INT",
+          "size": 10,
+          "fieldname": "ID",
+          "myextra": "auto_increment",
+          "noupdate": 1,
+          "noinsert": 1
+      },
+      {
+          "Field": "mydatadefID",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "UNI",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "mydatadefID",
+          "myextra": ""
+      },
+      {
+          "Field": "name",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "name",
+          "myextra": ""
+      },
+      {
+          "Field": "mytable",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "mytable",
+          "myextra": ""
+      },
+      {
+          "Field": "myheadtitlecolumn",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "myheadtitlecolumn",
+          "myextra": ""
+      },
+      {
+          "Field": "myheaddescriptioncolumn",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "myheaddescriptioncolumn",
+          "myextra": ""
+      },
+      {
+          "Field": "mypage",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "mypage",
+          "myextra": ""
+      },
+      {
+          "Field": "catalogtemplate",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "catalogtemplate",
+          "myextra": ""
+      },
+      {
+          "Field": "detailtemplate",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": "",
+          "mytype": "VARCHAR",
+          "size": 50,
+          "fieldname": "detailtemplate",
+          "myextra": ""
+      },
+      {
+          "Field": "creatorID",
+          "Type": "int(10)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": "",
+          "mytype": "INT",
+          "size": 10,
+          "fieldname": "creatorID",
+          "myextra": "",
+          "noupdate": 1,
+          "noinsert": 1
+      }
+  ],
+  "masterdata": {
+    "selector":"#masterdata1",
+      "url_new": "index.php?page=form&datadefID=k8datadefinitions&process_action=New&page_mode=2",
+      "url_edit": "index.php?page=form&datadefID=k8datadefinitions&process_action=Edit&page_mode=2",
+      "url_detail": "index.php?page=detail&datadefID=k8datadefinitions",
+      "url_load": "masterdata\/ProcessData.php?datadefID=k8datadefinitions&process_action=Load",
+      "url_save": "masterdata\/ProcessData.php?datadefID=k8datadefinitions&process_action=Save",
+      "url_del": "masterdata\/ProcessData.php?datadefID=k8datadefinitions&process_action=Del",
+      "url_readfilter": "masterdata\/ProcessData.php",
+      "data_readfilter": {
+          "datadefID": "k8datadefinitions",
+          "process_action": "ReadFilter"
+      },
+      "include":{
+        "beforedelete":"masterdata/k8datadefinitions/k8datadefinitions_beforedelete.php"
+      },
+      "sql_derived": "select k8datadefinitions.*,k8login.username,'' as k8select FROM k8datadefinitions LEFT OUTER JOIN k8login ON k8datadefinitions.creatorID=k8login.userID WHERE 1=1",
+      "sql_orderby": "mydatadefID"
+  },
+  "tabulator": {
+      "columns": [
+          {
+              "title": "ID",
+              "field": "ID",
+              "headerFilter": true,
+              "hozAlign": "right",
+              "width": "80",
+              "visible": false
+          },
+          {
+              "title": "datadefID",
+              "field": "mydatadefID",
+              "headerFilter": true
+          },
+          {
+              "title": "name",
+              "field": "name",
+              "headerFilter": true
+          },
+          {
+              "title": "table",
+              "field": "mytable",
+              "headerFilter": true
+          },
+          {
+              "title": "head title column",
+              "field": "myheadtitlecolumn",
+              "headerFilter": true
+          },
+          {
+              "title": "head description column",
+              "field": "myheaddescriptioncolumn",
+              "headerFilter": true
+          },
+          {
+              "title": "mypage",
+              "field": "mypage",
+              "headerFilter": true,
+              "visible":false
+          },
+          {
+              "title": "catalogtemplate",
+              "field": "catalogtemplate",
+              "visisble":false,
+              "headerFilter": true,
+              "width": "120"
+          },
+          {
+              "title": "detailtemplate",
+              "field": "detailtemplate",
+              "visisble":false,
+              "headerFilter": true,
+              "width": "120"
+          },
+          {
+              "title": "creator name",
+              "field": "username",
+              "headerFilter": true,
+              "width": "120"
+          },
+          {
+              "title": "creatorID",
+              "field": "creatorID",
+              "headerFilter": true,
+              "hozAlign": "right",
+              "visible":false,
+              "width": "80"
+          }
+      ]
+  },
+  "k8form": {
+    "selector": ".js_dataform",
+    "templatetype": "masterform",
+    "containers": [
+      {
+        "template": "<div class=\"row\">{{innerHTML}}</div>",
+        "containers": [
+          {
+            "template": "<div class=\"col-md-6\">{{innerHTML}}</div>",
+            "fields": [
+              {
+                  "name": "ID",
+                  "type": "hidden",
+                  "label": "ID"
+              },
+              {
+                  "name": "mydatadefID",
+                  "type": "text",
+                  "label": "datadefID",
+                  "attributes": {
+                    "maxlength": 50,
+                    "pattern":"^ex[a-z]{4,}"
+                  }
+              },
+              {
+                  "name": "name",
+                  "type": "text",
+                  "label": "name",
+                  "attributes": {
+                      "maxlength": 50
+                  }
+              },
+              {
+                  "name": "mytable",
+                  "type": "text",
+                  "label": "table",
+                  "attributes": {
+                      "maxlength": 50,
+                      "pattern":"^ex[a-z]{4,}"
+                  }
+              },
+              {
+                  "name": "myheadtitlecolumn",
+                  "type": "text",
+                  "label": "head title column",
+                  "attributes": {
+                      "maxlength": 50
+                  }
+              },
+              {
+                  "name": "myheaddescriptioncolumn",
+                  "type": "text",
+                  "label": "head description column",
+                  "attributes": {
+                      "maxlength": 50
+                  }
+              },
+              {
+                  "name": "catalogtemplate",
+                  "tagName": "select",
+                  "label": "catalogtemplate",
+                  "options": ["","catalog","catalog-4tiles","catalog-no-search"]
+              },
+              {
+                  "name": "detailtemplate",
+                  "tagName": "select",
+                  "label": "detailtemplate",
+                  "options": ["","detail","detail-img-org","detail-carousel"]
+              },
+              {
+                  "name": "mypage",
+                  "type": "hidden",
+                  "label": "mypage",
+                  "attributes": {
+                      "maxlength": 50
+                  }
+              }
+          ]
+        },
+          {
+            "template": "<div class=\"col-md-6\">{{innerHTML}}</div>",
+            "fields": [
+                {
+                  "fieldwraptemplate":"datadefID and table need to start with:<ul><li>'ex' followed by >4 caracters, only lower case letters</li></ul>please fill out 'head title column' and 'head description column' for the generation of:<ul><li>catalog</li><li>detail</li><li>lineedit</li></ul>the 'table' needs the columns:<ul><li>&lt;myname&gt;ID</li><li>creatorID</li></ul>check out the templates:<ul><li><a href='https://k8webkit.com/p/doc_catalog#chapter_templates' target='_blank'>catalog</a></li><li><a href='https://k8webkit.com/p/doc_detail#chapter_templates' target='_blank'>detail</a></li></ul>"
+                }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

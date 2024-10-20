@@ -1,0 +1,165 @@
+{
+    "datadefID": "k8rightgroups",
+    "table": "k8rightgroups",
+    "name": "Right groups",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+    "key": "rightgroupID",
+    "datalistcolumn":"name",
+    "head_end":["<script src=\"{{root}}masterdata/k8rightgroups/k8rightgroups.js\"></script>"],
+    "settingsadditional":["k8rightmembers","k8searchuser"],
+    "columns": [
+        {
+            "Field": "rightgroupID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "rightgroupID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "name",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "UNI",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "name",
+            "myextra": ""
+        },
+        {
+            "Field": "description",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "description",
+            "myextra": ""
+        },
+        {
+            "Field": "datecreated",
+            "Type": "date",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATE",
+            "size": 0,
+            "fieldname": "datecreated",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "url_new": "index.php?page=form&datadefID=k8rightgroups&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8rightgroups&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8rightgroups",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8rightgroups&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8rightgroups&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8rightgroups&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8rightgroups",
+            "process_action": "ReadFilter"
+        },
+        "rights":{
+          "read":{
+              "0":0,
+              "2":2,
+              "3":2
+          }
+        },
+
+        "sql_derived":"SELECT k8rightgroups.*,username,'' as k8select FROM k8rightgroups LEFT OUTER JOIN k8login ON k8login.userID=k8rightgroups.creatorID WHERE 1=1",
+        "sql_orderby":"username"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "rightgroupID",
+                "field": "rightgroupID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "name",
+                "field": "name",
+                "headerFilter": true
+            },
+            {
+                "title": "description",
+                "field": "description",
+                "headerFilter": true
+            },
+            {
+                "title": "datecreated",
+                "field": "datecreated",
+                "headerFilter": "input",
+                "width": 120,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd",
+                    "outputFormat": "GLOBALS_tabulatordateformat"
+                }
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "visible": false,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            {
+                "title": "owner",
+                "field": "username",
+                "headerFilter": true
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "rightgroupID",
+                "type": "hidden",
+                "label": "rightgroupID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "name",
+                "maxLength": 50
+            },
+            {
+                "name": "description",
+                "tagName": "textarea",
+                "label": "description"
+            }
+        ]
+    }
+}

@@ -1,0 +1,609 @@
+{
+    "datadefID":"k8login",
+    "lastupdated":"2024-06-05",
+    "table": "k8login",
+    "name": "Users",
+    "objectclass": "data_accessclass",
+    "key": "userID",
+    "datalistcolumn":"username",
+    "displaycolumn":"username",
+    "head_include":["masterdata/k8login/k8login_head_include.php"],
+    "XXXhead_end":["<script src=\"{{root}}masterdata/k8login/k8login.js\"></script>"],
+    "head_includedefault":true,
+    "foot":["<script src=\"{{root}}masterdata/k8login/k8login.js\"></script>"],
+    "foot_nodefault":true,
+    "settingsadditional":["k8rightgroups"],
+    "rightcheck": 1,
+    "columns": [
+        {
+            "Field": "userID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "userID",
+            "mynull": "NO",
+            "mykey": "PRI",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "rightgroupIDdefault",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "rightgroupIDdefault"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID"
+        },
+        {
+            "Field": "username",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "username",
+            "required": true
+        },
+        {
+            "Field": "email",
+            "Type": "varchar(100)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 100,
+            "fieldname": "email",
+            "required": true
+        },
+        {
+            "Field": "password",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "password",
+            "required": true
+        },
+        {
+            "Field": "title",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "title",
+            "myextra": ""
+        },
+        {
+            "Field": "firstname",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "firstname",
+            "myextra": ""
+        },
+        {
+            "Field": "lastname",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "lastname",
+            "myextra": ""
+        },
+        {
+            "Field": "street",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "street",
+            "myextra": ""
+        },
+        {
+            "Field": "country",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "country",
+            "myextra": ""
+        },
+        {
+            "Field": "code",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "code",
+            "myextra": ""
+        },
+        {
+            "Field": "city",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "city",
+            "myextra": ""
+        },
+        {
+            "Field": "phone",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "phone",
+            "myextra": ""
+        },
+        {
+            "Field": "mobile",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "mobile",
+            "myextra": ""
+        },
+        {
+            "Field": "active",
+            "Type": "tinyint(4)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TINYINT",
+            "size": 4,
+            "fieldname": "active"
+        },
+        {
+            "Field": "roleID",
+            "Type": "int(11)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "roleID"
+        },
+        {
+            "Field": "roles",
+            "Type": "varchar(255)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "roles",
+            "mydefault": "3,5,30"
+        },
+        {
+            "Field": "settings",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 1000000,
+            "fieldname": "settings"
+        },
+        {
+            "Field": "datetimecreated",
+            "Type": "datetime",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datetimecreated"
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID"
+        }
+    ],
+    "masterdata": {
+        "XXXheadline":"<div class=\"headline\"><div class=\"col\"><h1 class=\"js_title\">My data</h1></div></div>",
+        "edittype":4,
+        "formmode":3,
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "upload":{
+            "enabled":true,
+            "singleimage":true
+        },    
+        "showdelete":true,
+        "showsetdeleted":true,
+        "addfriends":true,
+        "defaultvalues":{
+          "roles":"3,5"
+        },
+        "root": "",
+        "url_new": "index.php?page=form&datadefID=k8login&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8login&process_action=Edit&page_mode=2",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=k8login&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=k8login&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8login&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8login&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8login&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8login",
+            "process_action": "ReadFilter"
+        },
+        "upload":{
+          "enabled":true
+        },
+        "defaultrights":0,
+        "rights":{
+            "create":{
+                "0":2,
+                "2":2
+            },
+            "read":{
+                "1":1,
+                "2":2,
+                "3":10
+            },
+            "update":{
+                "1":1,
+                "2":2,
+                "3":10
+            },
+            "delete":{
+                "1":1,
+                "2":2,
+                "3":10
+            }
+        },
+        "include":{
+            "validate":"masterdata/k8login/k8login_validate.php",
+            "afterupdate":"masterdata/k8login/k8login_SESSION_update.php",
+            "beforedelete":"masterdata/k8login/k8login_beforedelete.php"
+        },
+        "sql_statement":"SELECT k8login.*,k8rightgroups.name as rightgroupname, '' as k8select FROM k8login LEFT OUTER JOIN k8rightgroups ON k8rightgroups.rightgroupID=k8login.rightgroupIDdefault WHERE 1=1"
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "image",
+                "field": "image_file",
+                "formatter":"image",
+                "formatterParams":{
+                  "height":"50px"
+                },
+                "width": 100,
+                "headerFilter": false
+            },
+            {
+                "title": "username",
+                "field": "username",
+                "headerFilter": true
+            },
+            {
+                "title": "email",
+                "field": "email",
+                "headerFilter": true,
+                "width": 250
+            },
+            {
+                "title": "title",
+                "field": "title",
+                "headerFilter": true
+            },
+            {
+                "title": "firstname",
+                "field": "firstname",
+                "headerFilter": true
+            },
+            {
+                "title": "lastname",
+                "field": "lastname",
+                "headerFilter": true
+            },
+            {
+                "title": "street",
+                "field": "street",
+                "headerFilter": true
+            },
+            {
+                "title": "country",
+                "field": "country",
+                "headerFilter": true
+            },
+            {
+                "title": "code",
+                "field": "code",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "city",
+                "field": "city",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "phone",
+                "field": "phone",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "mobile",
+                "field": "mobile",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "categoryID",
+                "field": "categoryID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "settings",
+                "field": "settings",
+                "headerFilter": true,
+                "visible": false
+            },
+            {
+                "title": "rightgroupIDdefault",
+                "field": "rightgroupIDdefault",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "active",
+                "field": "active",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "roles",
+                "field": "roles",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "attached",
+                "field": "datetimecreated",
+                "headerFilter": "input",
+                "width": "140",
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                }
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "labelclass": "col-sm-3 col-form-label label-left",
+        "fieldwrapclass": "controls col-sm-9",
+        "fields": [
+            {
+              "name":"userID",
+              "type": "hidden",
+              "label": "userID"
+            },
+            {
+              "name":"username",
+              "type": "text",
+              "label": "username",
+              "maxLength": 50,
+              "required":true
+            },
+            {
+              "name":"email",
+              "type": "email",
+              "label": "email",
+              "maxLength": 100,
+              "required":true            
+            },
+            {
+              "name":"password",
+              "type": "password",
+              "label": "password",
+              "maxLength": 50,
+              "required":true
+            },
+            {
+                "name": "title",
+                "type": "text",
+                "label": "title",
+                "active":false,
+                "maxLength": 10
+            },
+            {
+                "name": "firstname",
+                "type": "text",
+                "label": "firstname",
+                "required":true,
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "lastname",
+                "type": "text",
+                "label": "lastname",
+                "required":true,
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "street",
+                "type": "text",
+                "required":true,
+                "label": "street",
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "country",
+                "active":false,
+                "label": "country"
+            },
+            {
+              "identifier":"code_city",
+              "active":false,
+              "inputgroup":
+              {
+                "label": "code / city",
+                "fields":[
+                {
+                    "name": "code",
+                    "fieldclass":"form-control k8-flex-100-fix",
+                    "type": "text",
+                    "label": "code",
+                    "required":true,
+                    "maxLength": 10
+                },
+                {
+                    "name": "city",
+                    "type": "text",
+                    "label": "city",
+                    "required":true,
+                    "fieldclass":"form-control k8-flex-100",
+                    "maxLength": 50
+                  }
+                ]
+              }
+            },
+            {
+                "name": "phone",
+                "type": "text",
+                "label": "phone",
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "mobile",
+                "type": "text",
+                "label": "mobile",
+                "active":false,
+                "maxLength": 50
+            },
+            
+            {
+              "name":"rightgroupIDdefault",
+              "type": "hidden"
+            },
+            {
+              "name":"rightgroupname",
+              "active":false,
+              "type": "text",
+              "label": "groupname",
+              "maxLength": 50,
+              "attributes":{
+                "list": "rightgroupname_datalist",
+                "autocomplete": "OFF"
+              },
+              "datalist":{
+                "datadefID":"k8rightgroups",
+                "IDfield":"rightgroupIDdefault",
+                "onlyoptions":true
+              }
+            },
+            {
+              "attention":"active=0 in example.js",
+              "name":"active",
+              "tagName": "select",
+              "value": 1,
+              "options":[{"value":"0","text":"0: not active"},{"value":"1","text":"1: active"},{"value":"2","text":"2: blocked"},{"value":"3","text":"3: deleted"}]
+            },
+            {
+              "name":"roleID",
+              "type": "hidden",
+              "value": 3
+            },
+            {
+              "identifier":"roles_inputgroup",
+              "inputgroup": {
+                "fields": [
+                  {
+                    "name":"roles",
+                    "type": "text",
+                    "attributes":{
+                      "autocomplete":"OFF"
+                    },
+                    "disabled":false,
+                    "default": 3
+                  }
+                ],
+                "template": "<div id=\"js_btnroles\" class=\"input-group\">{{field0}}<span class=\"input-group-text\">@</span></div>"
+              }
+            }
+        ]
+        
+    }
+}

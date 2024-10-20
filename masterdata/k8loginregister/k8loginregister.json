@@ -1,0 +1,184 @@
+{
+    "datadefID":"k8loginregister",
+    "table": "k8login",
+    "name": "Users",
+    "objectclass": "data_accessclass",
+    "key": "userID",
+    "displaycolumn":"username",
+    "rightcheck": 1,
+    "settingsadditional":["k8clients"],
+    "foot":["<script src=\"{{root}}masterdata/k8loginregister/k8loginregister.js\"></script>"],
+    "foot_nodefault":true,
+    "masterdata": {
+        "headline":"<div class=\"headline px-2\"><div><h1 class=\"js_title\">#ls#Register#</h1></div></div>",
+        "formwrapper":"<div class=\"form-wrapper\"><form class=\"js_dataform masterdata-form\"</form></div>",
+        "formmode":3,
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8login&process_action=Save",
+        "defaultrights":0,
+        "rights":{
+            "create":{
+                "0":2
+            }
+        },
+        "include":{
+            "afterupdate":"masterdata/k8logn/k8login_SESSION_update.php"
+        }
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+              "name":"userID",
+              "type": "hidden",
+              "label": "userID"
+            },
+            {
+              "name":"username",
+              "type": "text",
+              "label": "username",
+              "maxlength": 50,
+              "minlength":6,
+              "required":true
+            },
+            {
+              "name":"email",
+              "type": "email",
+              "label": "email",
+              "maxlength": 100,
+              "required":true            
+            },
+            {
+              "name":"password",
+              "type": "password",
+              "label": "password",
+              "maxlength": 50,
+              "minlength":6,
+              "required":true
+            },
+            
+            {
+                "name": "title",
+                "type": "text",
+                "label": "title",
+                "active":false,
+                "maxLength": 10
+            },
+            {
+                "name": "firstname",
+                "type": "text",
+                "label": "firstname",
+                "required":true,
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "lastname",
+                "type": "text",
+                "label": "lastname",
+                "required":true,
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "street",
+                "type": "text",
+                "required":true,
+                "label": "street",
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "country",
+                "active":false,
+                "label": "country"
+            },
+            {
+              "identifier":"code_city",
+              "active":false,
+              "inputgroup":
+              {
+                "label": "code / city",
+                "fields":[
+                {
+                    "name": "code",
+                    "fieldclass":"form-control k8-flex-100-fix",
+                    "type": "text",
+                    "label": "code",
+                    "required":true,
+                    "maxLength": 10
+                },
+                {
+                    "name": "city",
+                    "type": "text",
+                    "label": "city",
+                    "required":true,
+                    "fieldclass":"form-control k8-flex-100",
+                    "maxLength": 50
+                  }
+                ]
+              }
+            },
+            {
+                "name": "phone",
+                "type": "text",
+                "label": "phone",
+                "active":false,
+                "maxLength": 50
+            },
+            {
+                "name": "mobile",
+                "type": "text",
+                "label": "mobile",
+                "active":false,
+                "maxLength": 50
+            },
+            
+            {
+              "name":"active",
+              "tagName": "select",
+              "active":false,
+              "value": 0,
+              "options":[{"value":"0","text":"0: not active"},{"value":"1","text":"1: active"},{"value":"2","text":"2: blocked"},{"value":"3","text":"3: deleted"}]
+            },
+            {
+              "name":"clientID",
+              "type": "hidden"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "client name",
+                "required":true,
+                "attributes":{
+                  "list": "name_datalist",
+                  "autocomplete": "OFF"
+                },
+                "datalist":{
+                  "datadefID":"k8clients",
+                  "IDfield":"clientID",
+                  "onlyoptions":true
+                }
+            },
+            {
+              "name":"roleID",
+              "type": "hidden",
+              "value": 3
+            },
+            {
+              "name":"roles",
+              "type": "string",
+              "active":false,
+              "default": 3
+            },
+            {
+              "name":"termsofuse",
+              "type": "checkbox",
+              "required":true,
+              "label":"I agree with the {{termsofuse}}"
+            }
+        ]
+    }
+}

@@ -1,0 +1,274 @@
+{
+    "datadefID": "customer",
+    "name": "Customer",
+    "table": "er_customer",
+    "key": "accountID",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+  
+    "-- comment":"for the searchbox",
+    "displaycolumn": "accountnumber",
+    "searchcolumn1": "accountnumber",
+    "searchcolumn2": "name1",
+
+    "head_end":["<script src=\"{{root}}kitsamples/customerleft/customerleft.js\"></script>"],
+
+    "-- comment":" for the backend",
+    "columns": [
+        {
+            "Field": "accountID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "accountID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID",
+            "myextra": ""
+        },
+        {
+            "Field": "accountnumber",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "accountnumber",
+            "myextra": ""
+        },
+        {
+            "Field": "name1",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "name1",
+            "myextra": ""
+        },
+        {
+            "Field": "name2",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "name2",
+            "myextra": ""
+        },
+        {
+            "Field": "street",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "street",
+            "myextra": ""
+        },
+        {
+            "Field": "country",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "country",
+            "myextra": ""
+        },
+        {
+            "Field": "code",
+            "Type": "varchar(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 10,
+            "fieldname": "code",
+            "myextra": ""
+        },
+        {
+            "Field": "city",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "city",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "root": "",
+        "formmode":1,
+        "url_new": "index.php?page=form&datadefID=customer&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=customer&process_action=Edit&page_mode=2",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=customer&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=customer&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=customer&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=customer&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=customer&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "customer",
+            "process_action": "ReadFilter"
+        }
+    },
+    "tabulator": {
+        "height":"370",
+        "columns": [
+            {
+                "title": "accountID",
+                "field": "accountID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "Number",
+                "field": "accountnumber",
+                "headerFilter": true,
+                "width": "60"
+            },
+            {
+                "title": "name1",
+                "field": "name1",
+                "headerFilter": true
+            },
+            {
+                "title": "name2",
+                "field": "name2",
+                "visible": false,
+                "headerFilter": true
+            },
+            {
+                "title": "street",
+                "field": "street",
+                "visible": true,
+                "headerFilter": true
+            },
+            {
+                "title": "country",
+                "field": "country",
+                "visible": true,
+                "width":50,
+                "headerFilter": true
+            },
+            {
+                "title": "code",
+                "field": "code",
+                "width":80,
+                "visible": true,
+                "headerFilter": true
+            },
+            {
+                "title": "city",
+                "field": "city",
+                "visible": true,
+                "headerFilter": true
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible": false,
+                "width": "80"
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "accountID",
+                "type": "hidden",
+                "label": "accountID"
+            },
+            {
+                "name": "accountnumber",
+                "type": "number",
+                "label": "accountnumber"
+            },
+            {
+                "name": "name1",
+                "type": "text",
+                "label": "name1",
+                "maxLength": 50
+            },
+            {
+                "name": "name2",
+                "type": "text",
+                "label": "name2",
+                "maxLength": 50
+            },
+            {
+                "name": "street",
+                "type": "text",
+                "label": "street",
+                "maxLength": 50
+            },
+            {
+                "name": "country",
+                "type": "text",
+                "label": "country",
+                "maxLength": 10
+            },
+            {
+                "name": "code",
+                "type": "text",
+                "label": "code",
+                "maxLength": 10
+            },
+            {
+                "name": "city",
+                "type": "text",
+                "label": "city",
+                "maxLength": 50
+            }
+        ]
+    }
+}

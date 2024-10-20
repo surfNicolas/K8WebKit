@@ -1,0 +1,194 @@
+{
+    "datadefID": "k8menudisp",
+    "table": "k8menuentries",
+    "name": "k8menudisp",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "parentcolumn":"parentID",
+    "treearrayname":"children",
+    "rightcheck": 1,
+    "key": "IDentry",
+    "columns": [
+        {
+            "Field": "IDentry",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "IDentry",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "parentID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "parentID",
+            "myextra": ""
+        },
+        {
+            "Field": "sort",
+            "Type": "float",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "FLOAT",
+            "size": 0,
+            "fieldname": "sort",
+            "myextra": ""
+        },
+        {
+            "Field": "ID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "ID",
+            "myextra": ""
+        },
+        {
+            "Field": "mypage",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "mypage",
+            "myextra": ""
+        },
+        {
+            "Field": "active",
+            "Type": "tinyint(4)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TINYINT",
+            "size": 4,
+            "fieldname": "active",
+            "myextra": ""
+        },
+        {
+            "Field": "href",
+            "Type": "varchar(254)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "href",
+            "myextra": ""
+        },
+        {
+            "Field": "target",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "target",
+            "myextra": ""
+        },
+        {
+            "Field": "title",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "title",
+            "myextra": ""
+        },
+        {
+            "Field": "condition",
+            "Type": "varchar(254)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "condition",
+            "myextra": ""
+        },
+        {
+            "Field": "li_attributes",
+            "Type": "varchar(254)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "li_attributes",
+            "myextra": ""
+        },
+        {
+            "Field": "a_attributes",
+            "Type": "varchar(254)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 254,
+            "fieldname": "a_attributes",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "url_new": "index.php?page=form&datadefID=k8menudisp&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=k8menudisp&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=k8menudisp",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8menudisp&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8menudisp&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=k8menudisp&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8menudisp",
+            "process_action": "ReadFilter"
+        },
+        "bGETfilters":false,
+        "defaultrights":false,
+        "rights":{
+          "create":{
+            "2":"2"
+          },
+          "read":{
+            "0":"2",
+            "2":"2",
+            "3":"2"
+          },
+          "update":{
+            "2":"2"
+          },
+          "delete":{
+            "2":"2"
+          }
+        },
+        "include":{
+          "getEntries":"masterdata/k8menudisp/k8menudisp_getEntries.php"
+        },
+        "clause":"parentID=0",
+        "sql_statement":"SELECT k8menuentries.*,mypage as page,'' as k8select FROM k8menuentries WHERE 1=1",
+        "sql_orderby":"sort"
+    }
+}

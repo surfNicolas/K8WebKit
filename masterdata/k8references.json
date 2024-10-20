@@ -1,0 +1,506 @@
+{
+    "datadefID":8,
+    "table": "k8references",
+    "name": "k8references",
+    "objectclass": "data_accessclass",
+    "key": "ID",
+    "rightcheck": 1,
+    "columns": [
+        {
+            "Field": "ID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "ID",
+            "mynull": "NO",
+            "mykey": "PRI",
+            "mydefault": null,
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID"
+        },
+        {
+            "Field": "basetype",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "basetype"
+        },
+        {
+            "Field": "baseID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "baseID"
+        },
+        {
+            "Field": "marking",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "marking"
+        },
+        {
+            "Field": "type",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "type"
+        },
+        {
+            "Field": "title",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "title"
+        },
+        {
+            "Field": "description",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "description"
+        },
+        {
+            "Field": "descriptionlarge",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "descriptionlarge"
+        },
+        {
+            "Field": "path",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "path"
+        },
+        {
+            "Field": "filename",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "filename"
+        },
+        {
+            "Field": "filetype",
+            "Type": "varchar(50)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "filetype"
+        },
+        {
+            "Field": "height",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "height"
+        },
+        {
+            "Field": "width",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "width"
+        },
+        {
+            "Field": "aspect_ratio",
+            "Type": "float",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "FLOAT",
+            "size": 10,
+            "fieldname": "aspect_ratio"
+        },
+        {
+            "Field": "duration",
+            "Type": "double",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "DOUBLE",
+            "size": 0,
+            "fieldname": "duration"
+        },
+        {
+            "Field": "ready",
+            "Type": "tinyint(4)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "TINYINT"
+        },
+        {
+            "Field": "checked",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "checked"
+        },
+        {
+            "Field": "sort",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "sort"
+        },
+        {
+            "Field": "points",
+            "Type": "smallint(6)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "SMALLINT",
+            "size": 6,
+            "fieldname": "points"
+        },
+        {
+            "Field": "language",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "language"
+        },
+        {
+            "Field": "childID",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "childID"
+        },
+        {
+            "Field": "latitude",
+            "Type": "double",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "DOUBLE",
+            "size": 0,
+            "fieldname": "latitude"
+        },
+        {
+            "Field": "longitude",
+            "Type": "double",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "DOUBLE",
+            "size": 0,
+            "fieldname": "longitude"
+        },
+        {
+            "Field": "copyright",
+            "Type": "varchar(500)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 500,
+            "fieldname": "copyright"
+        },
+        {
+            "Field": "mydatetime",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "mydatetime"
+        },
+        {
+            "Field": "addressline",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "addressline"
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": "0",
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID"
+        },
+        {
+            "Field": "datecreated",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datecreated"
+        }
+    ],
+    "masterdata": {
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "sql_statement":"select k8references.*, ID as image_ID, concat(path,'/',filename) as image_file, filename as image_filename, case when width>height then 'landscape' else 'portrait' end as image_orientation, width/height as image_aspectratio, width as image_width, height as image_height, 1 as image_count from k8references WHERE 1=1 order by basetype,baseid,sort",
+        "rights":{
+            "read":{
+                "0":2,
+                "3":2
+            }
+        }
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "basetype",
+                "field": "basetype",
+                "headerFilter": true
+            },
+            {
+                "title": "baseID",
+                "field": "baseID",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "marking",
+                "field": "marking",
+                "headerFilter": true
+            },
+            {
+                "title": "type",
+                "field": "type",
+                "headerFilter": true
+            },
+            {
+                "title": "title",
+                "field": "title",
+                "headerFilter": true
+            },
+            {
+                "title": "description",
+                "field": "description",
+                "headerFilter": true
+            },
+            {
+                "title": "descriptionlarge",
+                "field": "descriptionlarge",
+                "headerFilter": true
+            },
+            {
+                "title": "path",
+                "field": "path",
+                "headerFilter": true
+            },
+            {
+                "title": "filename",
+                "field": "filename",
+                "headerFilter": true
+            }
+        ]
+    },
+    "jsonform": {
+        "schema": {
+            "ID": {
+                "type": "hidden",
+                "title": "ID"
+            },
+            "basetype": {
+                "type": "string",
+                "title": "basetype",
+                "maxLength": 50
+            },
+            "baseID": {
+                "type": "number",
+                "title": "baseID"
+            },
+            "marking": {
+                "type": "string",
+                "title": "marking",
+                "maxLength": 50
+            },
+            "type": {
+                "type": "string",
+                "title": "type",
+                "maxLength": 50
+            },
+            "title": {
+                "type": "string",
+                "title": "title",
+                "maxLength": 50
+            },
+            "description": {
+                "type": "string",
+                "title": "description"
+            },
+            "descriptionlarge": {
+                "type": "string",
+                "title": "descriptionlarge"
+            },
+            "path": {
+                "type": "string",
+                "title": "path",
+                "maxLength": 255
+            },
+            "filename": {
+                "type": "string",
+                "title": "filename",
+                "maxLength": 255
+            },
+            "filetype": {
+                "type": "string",
+                "title": "filetype",
+                "maxLength": 50
+            },
+            "height": {
+                "type": "number",
+                "title": "height"
+            },
+            "width": {
+                "type": "number",
+                "title": "width"
+            },
+            "duration": {
+                "type": "number",
+                "title": "duration"
+            },
+            "ready": {
+                "type": "number",
+                "title": "ready"
+            },
+            "checked": {
+                "type": "number",
+                "title": "checked"
+            },
+            "sort": {
+                "type": "number",
+                "title": "sort"
+            },
+            "points": {
+                "type": "number",
+                "title": "points"
+            },
+            "language": {
+                "type": "number",
+                "title": "language"
+            },
+            "childID": {
+                "type": "number",
+                "title": "childID"
+            },
+            "latitude": {
+                "type": "number",
+                "title": "latitude"
+            },
+            "longitude": {
+                "type": "number",
+                "title": "longitude"
+            },
+            "copyright": {
+                "type": "string",
+                "title": "copyright",
+                "maxLength": 500
+            },
+            "mydatetime": {
+                "type": "date",
+                "title": "mydatetime"
+            },
+            "addressline": {
+                "type": "string",
+                "title": "addressline",
+                "maxLength": 255
+            }
+        }
+    }
+}

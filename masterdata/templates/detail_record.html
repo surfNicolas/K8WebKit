@@ -1,0 +1,53 @@
+<div class="js_rec_record rec_record" data-keyvalue="{{keyvalue}}" data-rec_index="{{index}}">
+  
+  <div class="row g-0 px-2 js_rec_head rec_headbg js_catalog">
+    <div class="col-sm-4 mt-2 js_title">
+      <h1>{{{{headtitlecolumn}}}}</h1>
+    </div>
+    <div class="col-sm-8 mt-3 mb-2">
+      <div data-v_if="bCatalogCall()" class="my-1 my-md-2 text-end">
+        <a href="javascript:history.back()"><span class=""><i class="bi-arrow-left"></i></span> #ls#back to results#</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row px-2 pt-2">
+      <div class="col-sm-6 pb-2">
+        <div class="k8-box-square">
+            <div class="k8-box-content">
+              <img class="k8-image-{{image_orientation}}" src="{{image_file}}">
+            </div>
+        </div>
+        <div data-v_if="dat['imagearray'].length>1">
+          <div class="k8-image-list k8-hor-scrolling-wrapper" data-loop_object="imagearray">
+            <div class="k8-hor-scrolling-card">
+              <div class="k8-box-square" style="width: 80px;">
+                  <div class="k8-box-content">
+                    <img style="cursor: pointer" class="js_image_click k8-image-{{image_orientation*}}" src="" data-src="{{image_file*}}">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    
+      <div class="col-sm-6 pb-2">
+          <div class="k8-padding-side-small">
+              <div class="k8-content k8-padding-bottom-normal">
+                {{more_columns}}
+                <div class="text-end">
+                    <button type="button" class="js_mybtn btn btn-secondary">Choose</button>
+                </div>
+                <p>{{{{headdescriptioncolumn}}}}</p>
+              </div>
+         </div>
+      </div>  
+    </div>
+    <hr style="margin-top: 10px">
+    
+    <div class="g-0 px-2 rec_foot">
+      <div class="col-sm-12">
+        <p>Place here more details</p>
+      </div>
+    </div>
+</div>

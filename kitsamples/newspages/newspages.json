@@ -1,0 +1,289 @@
+{
+    "datadefID": "newspages",
+    "table": "er_pages",
+    "name": "News pages",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+    "key": "pageID",
+    "displaycolumn": "marking",
+
+    "headtitle":"News page",
+    "headdescription":"The News page catalog examples forces a picture size with an aspect ratio from 2:1",
+    "headimageLATER":"",
+  
+    "headtitlecolumn": "headtitle",
+    "headdescriptioncolumn": "headdescription",
+    "headimagecolumn": "index_file",
+  
+    "searchcolumn": "searchcolumn",
+    "head":["<script src='{{root}}tinymce/tinymce.js'></script>"],
+    "head_end": [
+        "<script src=\"{{root}}kitsamples\/newspages\/newspages_tinymce.js\"><\/script>"
+    ],
+    "masterdata": {
+        "htmlout": "catalog",
+        "defaultvalues":{"image_file":""},
+        "pagination":"external",
+        "paginationsize":2,
+        "upload": {
+          "enabled": true,
+          "settings":{
+            "minImageWidth":1000,
+            "minImageHeight":500,
+            "showtext":true,
+            "dropzone":{
+                "maxFilesize":5,
+                "resizeWidth":1000,
+                "resizeHeight":500,
+                "resizeMethod":"crop",
+                "acceptedFiles": ".jpeg,.jpg,.png,.gif",
+                "resize_not_working":false
+            }
+          }
+        },
+        "url_detail": "index.php?page=detail&datadefID=newspages",
+        "url_new": "index.php?page=form&datadefID=newspages&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=newspages&process_action=Edit&page_mode=2",
+        "url_load": "masterdata\/ProcessData.php?datadefID=newspages&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=newspages&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=newspages&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "newspages",
+            "process_action": "ReadFilter"
+        },
+        "filterobject":{
+          "templatetype":"filterblank",
+          "method":"GET",
+          "fields":[
+            {
+              "name": "headtitle",
+              "type": "search",
+              "label": "Search",
+              "operator": "like"
+            },
+            {
+              "figure": 2,
+              "name": "datetimecreated",
+              "type": "date",
+              "label": "Date created",
+              "operator": "x"
+            }
+          ]
+        },
+        "sql_derived": "SELECT er_pages.*,'' as k8select, username,case when groupID=2 then 'economy' when groupID=1 then 'politics' else 'general' end as grouplabel, concat_ws(marking,headtitle,headdescription) as searchcolumn FROM er_pages LEFT OUTER JOIN k8login ON userID=er_pages.creatorID WHERE 1=1",
+        "sql_orderby": "datetimecreated desc"
+    },
+    "html": {
+        "catalog": {
+            "container": "<div class=\"k8-example-catalog js_test\"> <div class=\"js_rec_container rec_container catalog pb-1\" data-rec_indexmax=\"-1\"> <div class=\"row js_rec_head js_catalog\" id=\"searcharea\"> <div class=\"col-sm-4 mt-3 js_title\"><h1>#datadef#name# XX</h1></div> <hr style=\"margin-top:0\"> <div class=\"js_rec_records rec_records\"></div> </div> </div>"
+        }
+    },
+    "columns": [
+        {
+            "Field": "pageID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "pageID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "marking",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 50,
+            "fieldname": "marking",
+            "myextra": ""
+        },
+        {
+            "Field": "groupID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "groupID",
+            "myextra": ""
+        },
+        {
+            "Field": "headtitle",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "headtitle",
+            "myextra": ""
+        },
+        {
+            "Field": "headdescription",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "VARCHAR",
+            "size": 255,
+            "fieldname": "headdescription",
+            "myextra": ""
+        },
+        {
+            "Field": "content",
+            "Type": "text",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "TEXT",
+            "size": 0,
+            "fieldname": "content",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(11)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 11,
+            "fieldname": "creatorID",
+            "myextra": ""
+        },
+        {
+            "Field": "datetimecreated",
+            "Type": "datetime",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DATETIME",
+            "size": 0,
+            "fieldname": "datetimecreated",
+            "myextra": ""
+        }
+    ],
+    "tabulator": {
+        "columns": [
+            {
+                "title": "pageID",
+                "field": "pageID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "marking",
+                "field": "marking",
+                "headerFilter": true
+            },
+            {
+                "title": "category",
+                "field": "grouplabel",
+                "headerFilter": true,
+                "headerFilter":"list","headerFilterFunc":"=","headerFilterParams":{"values":["","general","politics","economy"],"clearable":true},
+                "width": "120"
+            },
+            {
+                "title": "headtitle",
+                "field": "headtitle",
+                "headerFilter": true
+            },
+            {
+                "title": "headdescription",
+                "field": "headdescription",
+                "headerFilter": true
+            },
+            {
+                "title": "content",
+                "field": "content",
+                "visible":false,
+                "headerFilter": true
+            },
+            {
+                "title": "username",
+                "field": "username",
+                "headerFilter": true
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "visible":false,
+                "width": "80"
+            },
+            {
+                "title": "datetimecreated",
+                "field": "datetimecreated",
+                "headerFilter": "input",
+                "width": 160,
+                "formatter": "datetime",
+                "formatterParams": {
+                    "inputFormat": "yyyy-MM-dd HH:mm:ss",
+                    "outputFormat": "GLOBALS_tabulatordatetimeformat"
+                }
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "pageID",
+                "type": "hidden",
+                "label": "pageID"
+            },
+            {
+                "name": "marking",
+                "type": "text",
+                "label": "marking",
+                "required":true,
+                "maxLength": 50
+            },
+            {
+                "name": "groupID",
+                "tagName": "select",
+                "label": "category",
+                "options":[{"value":0,"text":"general"},{"value":1,"text":"politics"},{"value":2,"text":"economy"}]
+            },
+            {
+                "name": "headtitle",
+                "type": "text",
+                "label": "headtitle",
+                "required":true,
+                "maxLength": 255
+            },
+            {
+                "name": "headdescription",
+                "tagName": "textarea",
+                "label": "headdescription",
+                "maxLength": 255
+            },
+            {
+                "fieldwraptemplate": "<div class=\"mb-3\">{{labelelement}}{{fieldelement}}</div>",
+                "name": "content",
+                "tagName": "textarea",
+                "fieldclass": "form-control tinymce",
+                "label": "content"
+            }
+        ]
+    }
+}

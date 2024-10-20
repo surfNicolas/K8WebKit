@@ -1,0 +1,134 @@
+{
+    "datadefID": "basket",
+    "table": "er_basket",
+    "name": "er_basket",
+    "objectclass": "data_accessclass",
+    "requiredfile": "masterdata\/class_data_accessclass.php",
+    "rightcheck": 1,
+    "key": "currentID",
+    "columns": [
+        {
+            "Field": "currentID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "currentID",
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "foreignID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "foreignID",
+            "required":true,
+            "myextra": ""
+        },
+        {
+            "Field": "quantity",
+            "Type": "double(19,6)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "DOUBLE",
+            "size": 19,
+            "fieldname": "quantity",
+            "myextra": ""
+        },
+        {
+            "Field": "creatorID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "creatorID",
+            "myextra": ""
+        }
+    ],
+    "masterdata": {
+        "url_new": "index.php?page=form&datadefID=basket&process_action=New&page_mode=2",
+        "url_edit": "index.php?page=form&datadefID=basket&process_action=Edit&page_mode=2",
+        "url_detail": "index.php?page=detail&datadefID=basket",
+        "url_load": "masterdata\/ProcessData.php?datadefID=basket&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=basket&process_action=Save",
+        "url_del": "masterdata\/ProcessData.php?datadefID=basket&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "basket",
+            "process_action": "ReadFilter"
+        },
+        "rightuser_create": 0
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "currentID",
+                "field": "currentID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "visible": false
+            },
+            {
+                "title": "foreignID",
+                "field": "foreignID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80"
+            },
+            {
+                "title": "quantity",
+                "field": "quantity",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80",
+                "formatter": "money",
+                "formatterParams": {
+                    "decimal": "GLOBALS_decimal_point",
+                    "thousand": "GLOBALS_thousands_sep",
+                    "precision": "6"
+                }
+            },
+            {
+                "title": "creatorID",
+                "field": "creatorID",
+                "headerFilter": true,
+                "hozAlign": "right",
+                "width": "80"
+            }
+        ]
+    },
+    "k8form": {
+        "selector": ".js_dataform",
+        "templatetype": "masterform",
+        "fields": [
+            {
+                "name": "currentID",
+                "type": "hidden",
+                "label": "currentID"
+            },
+            {
+                "name": "foreignID",
+                "type": "number",
+                "label": "foreignID"
+            },
+            {
+                "name": "quantity",
+                "type": "number",
+                "label": "quantity"
+            }
+        ]
+    }
+}

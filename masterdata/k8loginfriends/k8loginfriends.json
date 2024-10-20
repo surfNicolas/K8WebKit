@@ -1,0 +1,154 @@
+{
+    "datadefID":"k8loginfriends",
+    "table": "k8loginfriends",
+    "name": "k8loginfriends",
+    "objectclass": "data_accessclass",
+    "key": "ID",
+    "masterdatadefID":"k8login",
+    "masterkey":"userID",
+    "columns": [
+        {
+            "Field": "ID",
+            "Type": "int(10)",
+            "Null": "NO",
+            "Key": "PRI",
+            "Default": null,
+            "Extra": "auto_increment",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "ID",
+            "mynull": "NO",
+            "mykey": "PRI",
+            "mydefault": null,
+            "myextra": "auto_increment"
+        },
+        {
+            "Field": "clientID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "clientID"
+        },
+        {
+            "Field": "userID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "userID"
+        },
+        {
+            "Field": "friendID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "friendID"
+        },
+        {
+            "Field": "roleID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "roleID"
+        },
+        {
+            "Field": "usergroupID",
+            "Type": "int(10)",
+            "Null": "YES",
+            "Key": "",
+            "Default": null,
+            "Extra": "",
+            "mytype": "INT",
+            "size": 10,
+            "fieldname": "usergroupID"
+        }
+    ],
+    "rightcheck": 1,
+    "masterdata": {
+        "object_mode": 0,
+        "add_empty_rec": 0,
+        "edittype":6,
+        "sql_statement":"SELECT k8loginfriends.*,loginfriends.username as friendname §select FROM k8loginfriends INNER JOIN k8login as loginfriends ON loginfriends.userID=k8loginfriends.friendID WHERE 1=1 ORDER BY k8login.username",
+        "url_getR": "masterdata\/ProcessData.php?datadefID=k8loginfriends&process_action=getRecords",
+        "url_init": "masterdata\/ProcessData.php?datadefID=k8loginfriends&process_action=Init",
+        "url_load": "masterdata\/ProcessData.php?datadefID=k8loginfriends&process_action=Load",
+        "url_save": "masterdata\/ProcessData.php?datadefID=k8loginfriends&process_action=Save",
+        "url_del":  "masterdata\/ProcessData.php?datadefID=k8loginfriends&process_action=Del",
+        "url_readfilter": "masterdata\/ProcessData.php",
+        "data_readfilter": {
+            "datadefID": "k8loginfriends",
+            "process_action": "ReadFilter"
+        },
+        "rights":{
+            "create":{
+              "1":1,
+              "2":2,
+              "3":1000
+            },
+            "read":{
+              "1":1,
+              "2":2,
+              "3":1000
+            },
+            "update":{
+              "1":1,
+              "2":2,
+              "3":1000
+            },
+            "delete":{
+              "1":1,
+              "2":2,
+              "3":1000
+            }
+        }
+    },
+    "tabulator": {
+        "columns": [
+            {
+                "title": "userID",
+                "field": "userID",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            },
+            {
+                "title": "friendID",
+                "field": "friendID",
+                "headerFilter": true,
+                "align": "right",
+                "width": "80"
+            }
+        ]
+    },
+    "jsonform": {
+        "schema": {
+            "ID": {
+                "type": "hidden",
+                "title": "ID"
+            },
+            "userID": {
+                "type": "number",
+                "title": "userID"
+            },
+            "friendID": {
+                "type": "number",
+                "title": "friendID"
+            }
+        }
+    }
+}
